@@ -27,6 +27,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
+**Lalitaditya Divakarla**
+
 I am a Ph.D. Researcher in Computer Science at the University of Minnesota, specializing in Digital Twins and Connected Autonomous Vehicles (CAVs). My research focuses on building AI-powered Digital Twin systems that integrate 5G/NextG networking and C-V2X technologies to enable safe, reliable, and scalable future mobility solutions.
 
 My work combines expertise in artificial intelligence, networking, robotics, and transportation systems. I develop innovative approaches to create real-time digital representations of autonomous vehicles and their environments, enabling better decision-making and safety in autonomous driving scenarios.
