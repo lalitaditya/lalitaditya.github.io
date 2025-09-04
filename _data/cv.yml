@@ -2,96 +2,94 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Lalitaditya Divakarla
+    - name: Location
+      value: Minneapolis, MN
+    - name: Phone
+      value: +1 (763)-913-1259
+    - name: Email
+      value: lalit.divakarla@gmail.com
     - name: Languages
-      value: English, German
+      value: English
+    - name: Profiles
+      value: >
+        <a href="https://www.linkedin.com/in/lalitdivakarla">LinkedIn</a>,
+        <a href="https://github.com/lalitaditya">GitHub</a>,
+        <a href="https://scholar.google.com/citations?user=MQTx2KAAAAAJ">Google Scholar</a>
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Doctor of Philosophy, Computer Science
+      institution: University of Minnesota, Twin Cities
+      year: Jan 2025 – Dec 2027
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+        - Advisor: Dr. Zhi-Li Zhang
+        - Researching Next-Gen 5G & C-V2X for ultra-low-latency CAV networks.
+        - AI-powered Digital Twins for AV network optimization.
+    - title: Master of Science, Robotics
+      institution: University of Minnesota, Twin Cities
+      year: Sep 2023 – May 2025
+    - title: Bachelor of Technology, Electronics and Communication Engineering
+      institution: PES University, India
+      year: Aug 2019 – May 2023
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Graduate Research Assistant
+      institution: University of Minnesota – Twin Cities, Minneapolis, USA
+      year: Aug 2024 – Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Constructed an Automated Vehicle sensor testbed for MNCAV integrating sensor fusion in ROS 2 and developing a digital twin.
+        - Spearheaded localization and planning enhancements.
+        - Engineered a low-cost C-V2X sensing prototype for rural intersections.
+    - title: Graduate Research Assistant
+      institution: University of Minnesota – Twin Cities, Minneapolis, USA
+      year: Jan 2024 – Aug 2024
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - Developed and deployed a drone swarm for wildfire smoke concentration measurement.
+        - Designed swarm algorithms and established communication with the base station.
+        - Built advanced image processing framework for precise vorticity measurement.
+    - title: Intern – Technology Consulting
+      institution: PriceWaterhouseCoopers Services LLP, Kolkata, India
+      year: Jan 2023 – Jul 2023
       description:
+        - Engineered Metaverse POCs using Unreal, Unity, and Blender.
+        - Pioneered Python automation in Blender to generate 3D models from text inputs.
+    - title: Student Project Intern
+      institution: NOKIA / Nokia Bell Labs, Bengaluru, India
+      year: Feb 2021 – Dec 2022
+      description:
+        - Configured ROS and Gazebo models for autonomous SLAM mapping.
+        - Developed a digital twin framework using 3D point cloud data for virtual replicas.
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
+- title: Skills
+  type: list
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - <u>Domain Expertise:</u> Autonomous Vehicles, Path Planning, C-V2X, 5G/NextG Networks, Starlink, AR/VR, Digital Twin
+    - <u>Programming & Scripting:</u> Python, C++, MATLAB, C#
+    - <u>Simulation & Development Tools:</u> ROS/ROS2, CARLA, Unity, Unreal Engine 5, Accuver XCAL/XCAP
+    - <u>Frameworks & Libraries:</u> Autoware, ArduPilot, OpenCV, PyTorch, TensorFlow
 
-- title: Honors and Awards
-  type: time_table
+- title: Publications
+  type: list
   contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+    - De La Fuente, J. F., Recondo, Á. P., Harvey, Venkateswaran, S., Balaganesh, N. S., Duggal, R. K., & Divakarla, S. G. L. (2023). Build your own closed loop: Graph-based proof of concept in closed loop for autonomous networks. *ITU Journal, 4(3), 503–536*. <a href="https://doi.org/10.52953/opdk5666">DOI</a>
+    - Rudraraju, K., Divakarla, S. G. L., & Vardhan, J. N. V. (2023). Door locking system using RFID and GSM technology. *2023 10th International Conference on Computing for Sustainable Global Development (INDIACom)*, 379–381.
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Connected & Autonomous Vehicles
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Next-Gen networking for ultra-low-latency systems
+        - C-V2X communication strategies
+    - title: Digital Twin Systems
       items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - AI-powered simulation and optimization
+        - Real-to-virtual testbeds for intelligent transportation
+    - title: Robotics & Simulation
+      items:
+        - Path planning and sensor fusion
+        - AR/VR-driven immersive systems
