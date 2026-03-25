@@ -175,6 +175,7 @@
   pointer-events: none;
 }
 .featured-post-proj h2 { z-index: 10; }
+.featured-post-proj h2 span { color: white; }
 .proj-grid-section { flex: 0 0 auto; position: relative; z-index: 1; }
 .proj-grid-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
 .proj-name { font-size: 12px; font-weight: 600; color: #1a1a1a; }
