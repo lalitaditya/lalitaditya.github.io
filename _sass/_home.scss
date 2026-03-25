@@ -198,7 +198,8 @@
 .proj-term-body { flex: 1; padding: 8px 10px; font-size: 8.5px; font-family: "SF Mono","Fira Code",monospace; line-height: 16px; overflow: hidden; color: #8b949e; }
 @keyframes proj-reveal { from{opacity:0;transform:translateY(2px)} to{opacity:1;transform:translateY(0)} }
 @keyframes proj-cursorblink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
-@keyframes proj-progressfill { from{width:0} to{width:var(--w)} }
+@keyframes proj-progressfill1 { from{width:0} to{width:140px} }
+@keyframes proj-progressfill2 { from{width:0} to{width:123px} }
 .proj-l1  { animation:proj-reveal .15s ease both 0s;    opacity:0; }
 .proj-l2  { animation:proj-reveal .15s ease both .45s;  opacity:0; }
 .proj-l3  { animation:proj-reveal .15s ease both .9s;   opacity:0; }
@@ -224,8 +225,8 @@
 .proj-cur2 { animation:proj-cursorblink 1s step-end infinite .5s; display:inline-block; width:5px; height:10px; background:#e6edf3; border-radius:1px; vertical-align:middle; }
 .proj-bar-wrap { display:inline-block; width:140px; height:7px; background:#21262d; border-radius:3px; vertical-align:middle; margin:0 6px; position:relative; overflow:hidden; }
 .proj-bar-fill { position:absolute; top:0; left:0; height:100%; border-radius:3px; width:0; }
-.proj-bf1 { background:#3fb950; animation:proj-progressfill 1.8s ease forwards 1.5s; --w:140px; }
-.proj-bf2 { background:#40c463; animation:proj-progressfill 2s ease forwards 2s; --w:123px; }
+.proj-bf1 { background:#3fb950; animation:proj-progressfill1 1.8s ease forwards 1.5s; }
+.proj-bf2 { background:#40c463; animation:proj-progressfill2 2s ease forwards 2s; }
 
 @keyframes exp-float1 { 0%,100%{transform:translateY(0) rotate(-1deg)} 50%{transform:translateY(-4px) rotate(-1deg)} }
 @keyframes exp-float2 { 0%,100%{transform:translateY(0) rotate(1.5deg)} 50%{transform:translateY(-5px) rotate(1.5deg)} }
