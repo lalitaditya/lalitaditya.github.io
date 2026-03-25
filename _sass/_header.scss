@@ -1,5 +1,5 @@
 .site-header {
-  min-height: 56px;
+  min-height: 70px;
   width: $container-width;
   position: fixed;
   background-color: white;
@@ -8,7 +8,7 @@
 }
 @media (max-width: $container-width) {
   .site-header {
-    min-height: 56px;
+    min-height: 70px;
     width: 95vw;
     position: fixed;
     background-color: white;
@@ -20,13 +20,26 @@
   text-decoration: none;
 }
 .site-title {
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 56px;
   margin-bottom: 0;
   margin-top: 0;
   padding-left: 10px;
+  padding-top: 10px;
   float: left;
+  line-height: 1;
+}
+.site-title a {
+  display: block;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.site-subtitle {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #888;
+  font-weight: 400;
+  margin-top: 2px;
 }
 .menu-list {
   line-height: $header-thickness;
