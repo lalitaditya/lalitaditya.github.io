@@ -5,6 +5,7 @@ permalink: /experience/
 ---
 
 <style>
+  .page-content { max-width: 775px; }
   .page-content h1 { display: none; }
 
   .exp-label {
@@ -20,102 +21,92 @@ permalink: /experience/
     display: inline-block;
   }
   .exp-intro {
-    font-size: 0.87rem;
+    font-size: 1rem;
     color: #6b6b6b;
-    max-width: 600px;
+    max-width: 1000px;
     line-height: 1.5;
-    margin: 0 0 3.5rem;
+    margin: 0 0 1.5rem;
     text-align: justify;
   }
 
-  /* ── Full-width breakout ─────────────────────────── */
-  .timeline-h-wrap {
-    overflow-x: auto;
-    padding-bottom: 24px;
+  /* ── Full-width breakout for wave timeline ───────── */
+  .wave-wrap {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 0 40px;
     box-sizing: border-box;
+    overflow-x: auto;
   }
 
-  .timeline-h {
-    display: flex;
-    flex-direction: column;
-    min-width: 700px;
-  }
-
-  /* ── Above row ───────────────────────────────────── */
-  /* All content that sits above the axis (cards + dates for above-items,
-     just dates for below-items). justify-content: flex-end anchors
-     everything to the bottom so dates always land right above the dots. */
-  .tl-above-row {
-    display: flex;
-  }
-  .tl-above-item {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 10px;
-  }
-
-  /* ── Axis row (line + dots) ──────────────────────── */
-  .tl-axis-row {
-    display: flex;
+  /* ── Wave timeline container ─────────────────────── */
+  /*
+     Layout reference (px from top of .wave-timeline):
+       0   ┐
+           │  above-card area (cards stacked here)
+       280 ┤
+           │  wave SVG starts (height: 240px)
+           │     trough at SVG y=180  ⇒ timeline y = 280+180 = 460
+           │     peak   at SVG y=60   ⇒ timeline y = 280+60  = 340
+       520 ┤
+           │  below-card area
+       720 ┘
+  */
+  .wave-timeline {
     position: relative;
-    height: 14px;
-    z-index: 1;
-  }
-  /* The gradient line — sits behind the dots */
-  .tl-axis-row::before {
-    content: '';
-    position: absolute;
-    left: 0; right: 0;
-    top: 50%;
-    height: 2px;
-    transform: translateY(-50%);
-    background: linear-gradient(to right, #5bc8af, #7c6ff7);
-    z-index: 1;
-  }
-  .tl-axis-dot {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2; /* dots sit on top of the line */
+    width: 100%;
+    min-width: 1300px;
+    height: 720px;
+    margin: -100px 0px 0px;
   }
 
-  /* ── Below row ───────────────────────────────────── */
-  .tl-below-row {
-    display: flex;
+  .wave-svg {
+    position: absolute;
+    top: 280px;
+    left: 0;
+    width: 100%;
+    height: 240px;
+    pointer-events: none;
+    z-index: 1;
   }
-  .tl-below-item {
-    flex: 1;
+
+  /* ── A single entry on the wave ──────────────────── */
+  /* `left` and `top` are set inline per entry (in pixels/percent
+     of the wave-timeline). The transform shifts the entry so its
+     dot center lands exactly on the (left, top) reference point. */
+  .wave-entry {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0 10px;
+    width: 480px;
+    z-index: 2;
   }
-
-  /* ── Stem ────────────────────────────────────────── */
-  .tl-stem {
-    width: 2px;
-    height: 36px;
-    background: #7c6ff7;
-    flex-shrink: 0;
+  /* Above-entry: bottom of the entry (the dot) anchors to the point */
+  .wave-above {
+    transform: translate(-50%, calc(-100% + 7px));
+  }
+  /* Below-entry: top of the entry (the dot) anchors to the point */
+  .wave-below {
+    transform: translate(-50%, -7px);
   }
 
   /* ── Dot ─────────────────────────────────────────── */
-  .tl-dot {
+  .we-dot {
     width: 14px;
     height: 14px;
     background: #7c6ff7;
     border-radius: 50%;
     border: 3px solid #f7f7f5;
     box-shadow: 0 0 0 2px #7c6ff7;
+    flex-shrink: 0;
+    z-index: 3;
+  }
+
+  /* ── Stem ────────────────────────────────────────── */
+  .we-stem {
+    width: 2px;
+    height: 100px;
+    background: #7c6ff7;
     flex-shrink: 0;
   }
 
@@ -132,7 +123,19 @@ permalink: /experience/
     white-space: nowrap;
     letter-spacing: 0.4px;
     box-shadow: 0 3px 10px rgba(124, 111, 247, 0.3);
-    margin-bottom: 8px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+  }
+  /* Date sits on the OPPOSITE side of the dot from the card */
+  .wave-above .tl-date {
+    /* Above-card → date below the dot */
+    top: calc(100% + 8px);
+  }
+  .wave-below .tl-date {
+    /* Below-card → date above the dot */
+    bottom: calc(100% + 8px);
   }
 
   /* ── Card ────────────────────────────────────────── */
@@ -145,7 +148,6 @@ permalink: /experience/
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 12px;
   }
   .tl-card-header {
     display: flex;
@@ -198,91 +200,83 @@ permalink: /experience/
 <p class="exp-label">01 / Journey</p>
 <p class="exp-intro">I've shipped AI products, defined requirements, run user feedback sessions, and written the pipelines that powered them, sometimes all in the same week. At Stanford, I built data infrastructure from scratch and had to sell it before it existed. That combination of knowing what to build and how to build it tends to follow me everywhere. Still not sure if that's a skill or a personality flaw.</p>
 
-<div class="timeline-h-wrap">
-  <div class="timeline-h">
+<div class="wave-wrap">
+  <div class="wave-timeline">
 
-    <!-- ── Above row ── -->
-    <div class="tl-above-row">
+    <!-- ── The wave line (SVG) ── -->
+    <!-- viewBox 0 0 1000 240. Path uses three quadratic curves:
+         (0,120)→(333,120) via control (166,240)  → trough at (166,180)
+         (333,120)→(666,120) via control (500,0)  → peak   at (500,60)
+         (666,120)→(1000,120) via control (833,240)→ trough at (833,180) -->
+    <svg class="wave-svg" viewBox="0 0 1000 240" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#5bc8af"/>
+          <stop offset="100%" stop-color="#7c6ff7"/>
+        </linearGradient>
+      </defs>
+      <path d="M 0 120 Q 166 320 333 120 Q 500 -80 666 120 Q 833 320 1000 120"
+            stroke="url(#waveGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
 
-      <!-- PwC: card → date → stem (all anchored to bottom) -->
-      <div class="tl-above-item">
-        <div class="tl-card">
-          <div class="tl-card-header">
-            <h3>PricewaterhouseCoopers (PwC)</h3>
-            <span class="tl-location">Kolkata, India</span>
-          </div>
-          <span class="tl-role">Associate, One Consulting – Emerging Tech</span>
-          <ul class="tl-desc">
-            <li>Deployed production RAG-based LLM product; launched MVP in 3 weeks, saving ~$180K annually.</li>
-            <li>Owned backend dev and prompt engineering; designed agentic workflows across multiple LLM APIs.</li>
-            <li>Drove user adoption via feedback sessions; shipped features improving output accuracy by ~40%.</li>
-            <li>Authored PRDs and conducted competitive analysis across 20+ industries to validate GenAI use cases.</li>
-          </ul>
-          <span class="tl-card-icon">💼</span>
+    <!-- ── PwC: above the wave, dot at left trough (16.6%, y=460) ── -->
+    <div class="wave-entry wave-above" style="left: 16.6%; top: 500px;">
+      <div class="tl-card">
+        <div class="tl-card-header">
+          <h3>PricewaterhouseCoopers (PwC)</h3>
+          <span class="tl-location">Kolkata, India</span>
         </div>
-        <span class="tl-date">Jan 2023 — Aug 2024</span>
-        <div class="tl-stem"></div>
+        <span class="tl-role">Associate, One Consulting – Emerging Tech</span>
+        <ul class="tl-desc">
+          <li>Deployed production RAG-based LLM product; launched MVP in 3 weeks, saving ~$180K annually.</li>
+          <li>Owned backend dev and prompt engineering; designed agentic workflows across multiple LLM APIs.</li>
+          <li>Drove user adoption via feedback sessions; shipped features improving output accuracy by ~40%.</li>
+          <li>Authored PRDs and conducted competitive analysis across 20+ industries to validate GenAI use cases.</li>
+        </ul>
+        <span class="tl-card-icon">💼</span>
       </div>
-
-      <!-- HEAL Lab: just date (anchored to bottom, right above dot) -->
-      <div class="tl-above-item">
-        <span class="tl-date">Oct 2024 — May 2025</span>
-      </div>
-
-      <!-- Haas: card → date → stem -->
-      <div class="tl-above-item">
-        <div class="tl-card">
-          <div class="tl-card-header">
-            <h3>Haas Center for Public Service</h3>
-            <span class="tl-location">Stanford, CA</span>
-          </div>
-          <span class="tl-role">Data Analyst</span>
-          <ul class="tl-desc">
-            <li>Built SQL/Python pipelines and Tableau dashboards across 15 programs serving 1,500+ students.</li>
-            <li>Applied crawl-walk-run model to drive adoption; secured stakeholder buy-in for program-wide migration.</li>
-            <li>Developed Airtable matching system with Airflow orchestration; reduced manual effort across 1,500+ records.</li>
-          </ul>
-          <span class="tl-card-icon">📊</span>
-        </div>
-        <span class="tl-date">Dec 2025 — Present</span>
-        <div class="tl-stem"></div>
-      </div>
-
+      <span class="tl-date">Jan 2023 — Aug 2024</span>
+      <div class="we-stem"></div>
+      <div class="we-dot"></div>
     </div>
 
-    <!-- ── Axis row (dots on the line) ── -->
-    <div class="tl-axis-row">
-      <div class="tl-axis-dot"><div class="tl-dot"></div></div>
-      <div class="tl-axis-dot"><div class="tl-dot"></div></div>
-      <div class="tl-axis-dot"><div class="tl-dot"></div></div>
+    <!-- ── HEAL Lab: below the wave, dot at center peak (50%, y=340) ── -->
+    <div class="wave-entry wave-below" style="left: 50%; top: 300px;">
+      <div class="we-dot"></div>
+      <div class="we-stem"></div>
+      <span class="tl-date">Oct 2024 — May 2025</span>
+      <div class="tl-card">
+        <div class="tl-card-header">
+          <h3>HEAL Lab, School of Medicine</h3>
+          <span class="tl-location">Stanford, CA</span>
+        </div>
+        <span class="tl-role">Research Associate</span>
+        <ul class="tl-desc">
+          <li>Built NLP pipelines analyzing 500+ unstructured clinical records; reduced manual review effort at scale.</li>
+          <li>Synthesized behavioral insights for interdisciplinary teams, informing improvements in care delivery workflows.</li>
+        </ul>
+        <span class="tl-card-icon">🧬</span>
+      </div>
     </div>
 
-    <!-- ── Below row ── -->
-    <div class="tl-below-row">
-
-      <!-- PwC: nothing below -->
-      <div class="tl-below-item"></div>
-
-      <!-- HEAL Lab: stem → card -->
-      <div class="tl-below-item">
-        <div class="tl-stem"></div>
-        <div class="tl-card">
-          <div class="tl-card-header">
-            <h3>HEAL Lab, School of Medicine</h3>
-            <span class="tl-location">Stanford, CA</span>
-          </div>
-          <span class="tl-role">Research Associate</span>
-          <ul class="tl-desc">
-            <li>Built NLP pipelines analyzing 500+ unstructured clinical records; reduced manual review effort at scale.</li>
-            <li>Synthesized behavioral insights for interdisciplinary teams, informing improvements in care delivery workflows.</li>
-          </ul>
-          <span class="tl-card-icon">🧬</span>
+    <!-- ── Haas: above the wave, dot at right trough (83.3%, y=460) ── -->
+    <div class="wave-entry wave-above" style="left: 83.3%; top: 500px;">
+      <div class="tl-card">
+        <div class="tl-card-header">
+          <h3>Haas Center for Public Service</h3>
+          <span class="tl-location">Stanford, CA</span>
         </div>
+        <span class="tl-role">Data Analyst</span>
+        <ul class="tl-desc">
+          <li>Built SQL/Python pipelines and Tableau dashboards across 15 programs serving 1,500+ students.</li>
+          <li>Applied crawl-walk-run model to drive adoption; secured stakeholder buy-in for program-wide migration.</li>
+          <li>Developed Airtable matching system with Airflow orchestration; reduced manual effort across 1,500+ records.</li>
+        </ul>
+        <span class="tl-card-icon">📊</span>
       </div>
-
-      <!-- Haas: nothing below -->
-      <div class="tl-below-item"></div>
-
+      <span class="tl-date">Dec 2025 — Present</span>
+      <div class="we-stem"></div>
+      <div class="we-dot"></div>
     </div>
 
   </div>
