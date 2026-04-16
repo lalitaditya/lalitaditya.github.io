@@ -39,18 +39,6 @@ permalink: /experience/
   }
 
   /* ── Wave timeline container ─────────────────────── */
-  /*
-     Layout reference (px from top of .wave-timeline):
-       0   ┐
-           │  above-card area (cards stacked here)
-       280 ┤
-           │  wave SVG starts (height: 240px)
-           │     trough at SVG y=180  ⇒ timeline y = 280+180 = 460
-           │     peak   at SVG y=60   ⇒ timeline y = 280+60  = 340
-       520 ┤
-           │  below-card area
-       720 ┘
-  */
   .wave-timeline {
     position: relative;
     width: 100%;
@@ -69,10 +57,6 @@ permalink: /experience/
     z-index: 1;
   }
 
-  /* ── A single entry on the wave ──────────────────── */
-  /* `left` and `top` are set inline per entry (in pixels/percent
-     of the wave-timeline). The transform shifts the entry so its
-     dot center lands exactly on the (left, top) reference point. */
   .wave-entry {
     position: absolute;
     display: flex;
@@ -81,16 +65,13 @@ permalink: /experience/
     width: 480px;
     z-index: 2;
   }
-  /* Above-entry: bottom of the entry (the dot) anchors to the point */
   .wave-above {
     transform: translate(-50%, calc(-100% + 7px));
   }
-  /* Below-entry: top of the entry (the dot) anchors to the point */
   .wave-below {
     transform: translate(-50%, -7px);
   }
 
-  /* ── Dot ─────────────────────────────────────────── */
   .we-dot {
     width: 14px;
     height: 14px;
@@ -102,7 +83,6 @@ permalink: /experience/
     z-index: 3;
   }
 
-  /* ── Stem ────────────────────────────────────────── */
   .we-stem {
     width: 2px;
     height: 100px;
@@ -110,7 +90,6 @@ permalink: /experience/
     flex-shrink: 0;
   }
 
-  /* ── Date pill ───────────────────────────────────── */
   .tl-date {
     display: inline-flex;
     align-items: center;
@@ -128,17 +107,13 @@ permalink: /experience/
     transform: translateX(-50%);
     z-index: 4;
   }
-  /* Date sits on the OPPOSITE side of the dot from the card */
   .wave-above .tl-date {
-    /* Above-card → date below the dot */
     top: calc(100% + 8px);
   }
   .wave-below .tl-date {
-    /* Below-card → date above the dot */
     bottom: calc(100% + 8px);
   }
 
-  /* ── Card ────────────────────────────────────────── */
   .tl-card {
     background: white;
     border-radius: 16px;
@@ -206,41 +181,14 @@ permalink: /experience/
     pointer-events: none;
     user-select: none;
   }
-  .tl-heal-card {
-    position: absolute;
-    right: -40px;
-    bottom: -40px;
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    opacity: 0.22;
-    pointer-events: none;
-    user-select: none;
-  }
-   .tl-haas-card {
-    position: absolute;
-    right: 0px;
-    bottom: -75px;
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-    opacity: 0.22;
-    pointer-events: none;
-    user-select: none;
-  }
 </style>
 
-<p class="exp-label">01 / Journey</p>
-<p class="exp-intro">I've shipped AI products, defined requirements, run user feedback sessions, and written the pipelines that powered them, sometimes all in the same week. At Stanford, I built data infrastructure from scratch and had to sell it before it existed. That combination of knowing what to build and how to build it tends to follow me everywhere. Still not sure if that's a skill or a personality flaw.</p>
+<p class="exp-label">02 / Journey</p>
+<p class="exp-intro">From autonomous factory mapping at Nokia to building C-V2X testbeds and 5G teleoperation pipelines at the University of Minnesota, I've been engineering systems at the intersection of robotics, networking, and real-time autonomy. Each role taught me something different about making machines perceive, decide, and communicate in the physical world.</p>
 
 <div class="wave-wrap">
   <div class="wave-timeline">
 
-    <!-- ── The wave line (SVG) ── -->
-    <!-- viewBox 0 0 1000 240. Path uses three quadratic curves:
-         (0,120)→(333,120) via control (166,240)  → trough at (166,180)
-         (333,120)→(666,120) via control (500,0)  → peak   at (500,60)
-         (666,120)→(1000,120) via control (833,240)→ trough at (833,180) -->
     <svg class="wave-svg" viewBox="0 0 1000 240" preserveAspectRatio="none">
       <defs>
         <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -252,62 +200,59 @@ permalink: /experience/
             stroke="url(#waveGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
     </svg>
 
-    <!-- ── PwC: above the wave, dot at left trough (16.6%, y=460) ── -->
+    <!-- ── Nokia: above the wave, dot at left trough (16.6%) ── -->
     <div class="wave-entry wave-above" style="left: 16.6%; top: 500px;">
+      <div class="tl-card">
+        <div class="tl-card-header">
+          <h3>NOKIA / NOKIA Bell Labs</h3>
+          <span class="tl-location">Bengaluru, India</span>
+        </div>
+        <span class="tl-role">Student Project Intern</span>
+        <ul class="tl-desc">
+          <li>Led development of AutoMap, a ROS/Gazebo-driven SLAM system using TurtleBot, LiDAR, and camera data for autonomous mapping and navigation.</li>
+          <li>Produced DT-ready point clouds for site-scale planning and 3D environment modeling, deployed in Nokia factories.</li>
+        </ul>
+      </div>
+      <span class="tl-date">Feb 2021 — Dec 2022</span>
+      <div class="we-stem"></div>
+      <div class="we-dot"></div>
+    </div>
+
+    <!-- ── PwC: below the wave, dot at center peak (50%) ── -->
+    <div class="wave-entry wave-below" style="left: 50%; top: 300px;">
+      <div class="we-dot"></div>
+      <div class="we-stem"></div>
+      <span class="tl-date">Jan 2023 — Jul 2023</span>
       <div class="tl-card">
         <div class="tl-card-header">
           <h3>PricewaterhouseCoopers (PwC)</h3>
           <span class="tl-location">Kolkata, India</span>
         </div>
-        <span class="tl-role">Associate, One Consulting – Emerging Tech</span>
+        <span class="tl-role">Intern — Technology Consulting</span>
         <ul class="tl-desc">
-          <li>Deployed production RAG-based LLM product; launched MVP in 3 weeks, saving ~$180K annually.</li>
-          <li>Owned backend dev and prompt engineering; designed agentic workflows across multiple LLM APIs.</li>
-          <li>Drove user adoption via feedback sessions; shipped features improving output accuracy by ~40%.</li>
-          <li>Authored PRDs and conducted competitive analysis across 20+ industries to validate GenAI use cases.</li>
+          <li>Engineered Metaverse POCs using Unreal, Unity, and Blender to create immersive client experiences.</li>
+          <li>Pioneered Python automation in Blender with LLMs to generate 3D models from text inputs, boosting efficiency through GenAI tools.</li>
         </ul>
         <img src="/assets/img/pwc.png" class="tl-card-img-icon" alt="">
       </div>
-      <span class="tl-date">Jan 2023 — Aug 2024</span>
-      <div class="we-stem"></div>
-      <div class="we-dot"></div>
     </div>
 
-    <!-- ── HEAL Lab: below the wave, dot at center peak (50%, y=340) ── -->
-    <div class="wave-entry wave-below" style="left: 50%; top: 300px;">
-      <div class="we-dot"></div>
-      <div class="we-stem"></div>
-      <span class="tl-date">Oct 2024 — May 2025</span>
-      <div class="tl-card">
-        <div class="tl-card-header">
-          <h3>HEAL Lab, School of Medicine</h3>
-          <span class="tl-location">Stanford, CA</span>
-        </div>
-        <span class="tl-role">Research Associate</span>
-        <ul class="tl-desc">
-          <li>Built NLP pipelines analyzing 500+ unstructured clinical records; reduced manual review effort at scale.</li>
-          <li>Synthesized behavioral insights for interdisciplinary teams, informing improvements in care delivery workflows.</li>
-        </ul>
-        <img src="/assets/img/heal.png" class="tl-heal-card" alt="">
-      </div>
-    </div>
-
-    <!-- ── Haas: above the wave, dot at right trough (83.3%, y=460) ── -->
+    <!-- ── UMN GRA: above the wave, dot at right trough (83.3%) ── -->
     <div class="wave-entry wave-above" style="left: 83.3%; top: 500px;">
       <div class="tl-card">
         <div class="tl-card-header">
-          <h3>Haas Center for Public Service</h3>
-          <span class="tl-location">Stanford, CA</span>
+          <h3>University of Minnesota</h3>
+          <span class="tl-location">Minneapolis, MN</span>
         </div>
-        <span class="tl-role">Data Analyst</span>
+        <span class="tl-role">Graduate Research Assistant</span>
         <ul class="tl-desc">
-          <li>Built SQL/Python pipelines and Tableau dashboards across 15 programs serving 1,500+ students.</li>
-          <li>Applied crawl-walk-run model to drive adoption; secured stakeholder buy-in for program-wide migration.</li>
-          <li>Developed Airtable matching system with Airflow orchestration; reduced manual effort across 1,500+ records.</li>
+          <li>Leading Sony Digital Twin (NextGDT) project developing AI-driven 3D mapping and ray-tracing digital twins to optimize 5G/NextG networks with NVIDIA Sionna.</li>
+          <li>Engineered C-V2X prototypes (OBU-RSU, PC5) for conflict detection, priority warnings; profiled latency, PRR, and jitter.</li>
+          <li>Built AV testbeds (ROS 2 + Autoware) with LiDAR-camera-GNSS fusion, HD maps (SLAM), and planning-focused autonomy.</li>
+          <li>Developed a 5G/NextG teleoperation pipeline with latency/QoS measurements under mobility and handovers.</li>
         </ul>
-        <img src="/assets/img/haas.png" class="tl-haas-card" alt="">
       </div>
-      <span class="tl-date">Dec 2025 — Present</span>
+      <span class="tl-date">May 2024 — Present</span>
       <div class="we-stem"></div>
       <div class="we-dot"></div>
     </div>

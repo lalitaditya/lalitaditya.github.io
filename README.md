@@ -1,6 +1,6 @@
-# Antra Nakhasi — Portfolio
+# Lalitaditya Divakarla — Portfolio
 
-Personal portfolio site for Antra Nakhasi, built on a fork of the [Millennial](https://github.com/LeNPaul/Millennial) Jekyll theme.
+Personal portfolio site for Lalitaditya Divakarla, built on a fork of the [Millennial](https://github.com/LeNPaul/Millennial) Jekyll theme.
 
 ## Local Development
 

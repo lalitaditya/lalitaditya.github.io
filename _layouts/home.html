@@ -9,9 +9,9 @@ title: Home
       <div class="featured-post featured-post-lottie">
         <div id="lottie-avatar"></div>
         <div class="tile-intro-text">
-          <h1>Hi, I'm <span class="name-accent">Antra</span></h1>
-          <p>MS MS&amp;E at Stanford by day, debugger of life choices by night.</p>
-          <p>I speak fluent Python, broken SQL, and surprisingly good stakeholder.</p>
+          <h1>Hi, I'm <span class="name-accent">Lalit</span></h1>
+          <p>Ph.D. in CS at UMN, building AI-powered digital twins for autonomous vehicles.</p>
+          <p>I speak fluent Python, C++, ROS 2, and occasionally 5G.</p>
         </div>
         <h2><span>About Me</span></h2>
       </div>
@@ -43,35 +43,35 @@ title: Home
             <rect x="60" y="56" width="162" height="118" rx="3" fill="#f5f2ee" stroke="#dedad2" stroke-width="1"/>
             <rect x="56" y="60" width="162" height="118" rx="3" fill="#fdfcfa" stroke="#e0dcd4" stroke-width="1.2"/>
             <rect x="64" y="68" width="146" height="10" rx="1.5" fill="#e8e4f0" opacity=".8"/>
-            <text x="68" y="77" font-size="6" fill="#7c6ff7" font-family="monospace" opacity=".9">user_id  |  event  |  timestamp  |  value</text>
+            <text x="68" y="77" font-size="6" fill="#7c6ff7" font-family="monospace" opacity=".9">veh_id  |  sensor  |  lat/lon        |  rsrp</text>
             <g opacity=".6" font-size="5.5" font-family="monospace" fill="#555">
-              <text x="68" y="90">U1042   |  click  |  2024-01-15  |  0.82</text>
+              <text x="68" y="90">AV01    |  LiDAR   |  44.974,-93.23  |  -78</text>
               <line x1="64" y1="83" x2="210" y2="83" stroke="#e0dcd4" stroke-width=".5"/>
-              <text x="68" y="100">U2891   |  view   |  2024-01-15  |  1.00</text>
+              <text x="68" y="100">AV01    |  cam_0   |  44.974,-93.23  |  -78</text>
               <line x1="64" y1="93" x2="210" y2="93" stroke="#e0dcd4" stroke-width=".5"/>
-              <text x="68" y="110">U0334   |  drop   |  2024-01-16  |  0.00</text>
+              <text x="68" y="110">AV02    |  GNSS    |  44.975,-93.24  |  -82</text>
               <line x1="64" y1="103" x2="210" y2="103" stroke="#e0dcd4" stroke-width=".5"/>
-              <text x="68" y="120">U1198   |  conv   |  2024-01-16  |  0.95</text>
+              <text x="68" y="120">AV01    |  V2X     |  44.974,-93.23  |  -75</text>
               <line x1="64" y1="113" x2="210" y2="113" stroke="#e0dcd4" stroke-width=".5"/>
-              <text x="68" y="130">U4421   |  click  |  2024-01-17  |  0.71</text>
+              <text x="68" y="130">AV03    |  LiDAR   |  44.976,-93.22  |  -80</text>
               <line x1="64" y1="123" x2="210" y2="123" stroke="#e0dcd4" stroke-width=".5"/>
-              <text x="68" y="140">U3302   |  view   |  2024-01-17  |  1.00</text>
+              <text x="68" y="140">AV02    |  cam_1   |  44.975,-93.24  |  -82</text>
               <line x1="64" y1="133" x2="210" y2="133" stroke="#e0dcd4" stroke-width=".5"/>
-              <text x="68" y="150">U2210   |  conv   |  2024-01-18  |  0.88</text>
+              <text x="68" y="150">AV03    |  V2X     |  44.976,-93.22  |  -77</text>
               <line x1="64" y1="143" x2="210" y2="143" stroke="#e0dcd4" stroke-width=".5"/>
-              <text x="68" y="160">U5512   |  drop   |  2024-01-18  |  0.00</text>
+              <text x="68" y="160">AV01    |  5G_UE   |  44.974,-93.23  |  -74</text>
               <line x1="64" y1="153" x2="210" y2="153" stroke="#e0dcd4" stroke-width=".5"/>
             </g>
-            <text x="64" y="173" font-size="7" fill="#9090a8" font-family="monospace" opacity=".7">raw_events.csv  —  12,847 rows</text>
+            <text x="64" y="173" font-size="7" fill="#9090a8" font-family="monospace" opacity=".7">sensor_telemetry.csv  —  48,291 rows</text>
           </g>
           <!-- yellow sticky -->
           <g style="animation:exp-float1 5s ease-in-out infinite .5s">
             <rect x="46" y="200" width="72" height="68" rx="2" fill="#fef3a0" stroke="#f0e060" stroke-width=".8"/>
-            <text x="52" y="214" font-size="7" fill="#6a5a00" font-family="-apple-system,sans-serif" font-weight="600">Data sources</text>
-            <text x="52" y="226" font-size="6.5" fill="#8a7a10" font-family="-apple-system,sans-serif">&#x2192; Qualtrics</text>
-            <text x="52" y="237" font-size="6.5" fill="#8a7a10" font-family="-apple-system,sans-serif">&#x2192; Snowflake</text>
-            <text x="52" y="248" font-size="6.5" fill="#8a7a10" font-family="-apple-system,sans-serif">&#x2192; HubSpot</text>
-            <text x="52" y="259" font-size="6.5" fill="#8a7a10" font-family="-apple-system,sans-serif">&#x2192; Airtable</text>
+            <text x="52" y="214" font-size="7" fill="#6a5a00" font-family="-apple-system,sans-serif" font-weight="600">Sensor stack</text>
+            <text x="52" y="226" font-size="6.5" fill="#8a7a10" font-family="-apple-system,sans-serif">&#x2192; Velodyne</text>
+            <text x="52" y="237" font-size="6.5" fill="#8a7a10" font-family="-apple-system,sans-serif">&#x2192; ZED cam</text>
+            <text x="52" y="248" font-size="6.5" fill="#8a7a10" font-family="-apple-system,sans-serif">&#x2192; Ublox GNSS</text>
+            <text x="52" y="259" font-size="6.5" fill="#8a7a10" font-family="-apple-system,sans-serif">&#x2192; Cohda V2X</text>
           </g>
           <!-- eraser -->
           <rect x="200" y="200" width="38" height="14" rx="3" fill="#f0a0a0" stroke="#d88080" stroke-width=".8"/>
@@ -121,33 +121,31 @@ title: Home
             </g>
             <g font-size="6" font-family="monospace">
               <text x="412" y="96"  fill="#7c6ff7">import</text>
-              <text x="444" y="96"  fill="#c0b8f0"> pandas </text>
-              <text x="480" y="96"  fill="#7c6ff7">as</text>
-              <text x="490" y="96"  fill="#c0b8f0"> pd</text>
+              <text x="444" y="96"  fill="#c0b8f0"> rclpy</text>
               <text x="412" y="106" fill="#7c6ff7">from</text>
-              <text x="432" y="106" fill="#c0b8f0"> sklearn</text>
-              <text x="468" y="106" fill="#888">.</text>
-              <text x="472" y="106" fill="#5bc8af">pipeline</text>
+              <text x="432" y="106" fill="#c0b8f0"> sensor_msgs</text>
+              <text x="488" y="106" fill="#888">.</text>
+              <text x="492" y="106" fill="#5bc8af">msg</text>
               <text x="510" y="106" fill="#7c6ff7"> import</text>
-              <text x="540" y="106" fill="#f0c060"> Pipeline</text>
+              <text x="540" y="106" fill="#f0c060"> PointCloud2</text>
               <text x="412" y="116" fill="#7c6ff7">from</text>
-              <text x="432" y="116" fill="#c0b8f0"> sentence_transformers</text>
+              <text x="432" y="116" fill="#c0b8f0"> nav_msgs.msg</text>
               <text x="420" y="126" fill="#7c6ff7">import</text>
-              <text x="450" y="126" fill="#5bc8af"> SentenceTransformer</text>
-              <text x="412" y="142" fill="#888"># load + embed documents</text>
-              <text x="412" y="152" fill="#f0c060">model</text>
-              <text x="436" y="152" fill="#c0b8f0"> = SentenceTransformer(</text>
-              <text x="418" y="162" fill="#a0f080">"all-MiniLM-L6-v2"</text>
+              <text x="450" y="126" fill="#5bc8af"> Path</text>
+              <text x="412" y="142" fill="#888"># fuse LiDAR + camera + GNSS</text>
+              <text x="412" y="152" fill="#f0c060">fused</text>
+              <text x="438" y="152" fill="#c0b8f0"> = sensor_fusion(</text>
+              <text x="418" y="162" fill="#a0f080">lidar, cam, gnss</text>
               <text x="508" y="162" fill="#c0b8f0">)</text>
-              <text x="412" y="178" fill="#f0c060">embeddings</text>
-              <text x="466" y="178" fill="#c0b8f0"> = model.encode(docs)</text>
-              <text x="412" y="194" fill="#888"># hybrid search + rerank</text>
-              <text x="412" y="204" fill="#f0c060">results</text>
-              <text x="440" y="204" fill="#c0b8f0"> = pipeline.run(</text>
-              <text x="412" y="214" fill="#c0b8f0">    query, top_k=</text>
-              <text x="480" y="214" fill="#f08060">10</text>
-              <text x="488" y="214" fill="#c0b8f0">)</text>
-              <text x="412" y="230" fill="#888"># accuracy: +40%</text>
+              <text x="412" y="178" fill="#f0c060">path</text>
+              <text x="430" y="178" fill="#c0b8f0"> = planner.plan(fused)</text>
+              <text x="412" y="194" fill="#888"># publish to Autoware</text>
+              <text x="412" y="204" fill="#f0c060">pub</text>
+              <text x="428" y="204" fill="#c0b8f0">.publish(path)</text>
+              <text x="412" y="214" fill="#c0b8f0">rclpy.spin(</text>
+              <text x="472" y="214" fill="#f08060">node</text>
+              <text x="492" y="214" fill="#c0b8f0">)</text>
+              <text x="412" y="230" fill="#888"># latency: 12ms e2e</text>
               <rect x="412" y="242" width="5" height="8" rx="1" fill="#7c6ff7" style="animation:exp-cursorblink 1s step-end infinite"/>
             </g>
           </g>
@@ -168,29 +166,29 @@ title: Home
             <circle cx="896" cy="48" r="5" fill="#e05050" stroke="#c04040" stroke-width=".8"/>
             <rect x="830" y="50" width="210" height="160" rx="3" fill="#fefefe" stroke="#e0ddd8" stroke-width="1.2"/>
             <path d="M1038 50 L1040 50 L1040 66 Z" fill="#e8e4dc"/>
-            <text x="842" y="68" font-size="7.5" fill="#3a3050" font-family="-apple-system,sans-serif" font-weight="700">User Journey &#x2014; Onboarding</text>
+            <text x="842" y="68" font-size="7.5" fill="#3a3050" font-family="-apple-system,sans-serif" font-weight="700">AV Pipeline &#x2014; Teleop</text>
             <line x1="838" y1="72" x2="1034" y2="72" stroke="#e0ddd8" stroke-width=".8"/>
             <g font-size="6" font-family="-apple-system,sans-serif">
               <rect x="840" y="80" width="34" height="22" rx="3" fill="#f0eeff" stroke="#7c6ff7" stroke-width="1"/>
-              <text x="857" y="93" text-anchor="middle" fill="#5048a8" font-weight="600">Aware</text>
+              <text x="857" y="93" text-anchor="middle" fill="#5048a8" font-weight="600">Sense</text>
               <line x1="874" y1="91" x2="882" y2="91" stroke="#9090b8" stroke-width="1" marker-end="url(#exp-arr)"/>
               <rect x="884" y="80" width="34" height="22" rx="3" fill="#f0faf8" stroke="#5bc8af" stroke-width="1"/>
-              <text x="901" y="93" text-anchor="middle" fill="#1a6a52" font-weight="600">Sign up</text>
+              <text x="901" y="93" text-anchor="middle" fill="#1a6a52" font-weight="600">Fuse</text>
               <line x1="918" y1="91" x2="926" y2="91" stroke="#9090b8" stroke-width="1" marker-end="url(#exp-arr)"/>
               <rect x="928" y="80" width="34" height="22" rx="3" fill="#fff8f0" stroke="#f08060" stroke-width="1"/>
-              <text x="945" y="93" text-anchor="middle" fill="#8a3820" font-weight="600">Activate</text>
+              <text x="945" y="93" text-anchor="middle" fill="#8a3820" font-weight="600">Plan</text>
               <line x1="962" y1="91" x2="970" y2="91" stroke="#9090b8" stroke-width="1" marker-end="url(#exp-arr)"/>
               <rect x="972" y="80" width="34" height="22" rx="3" fill="#f0faf8" stroke="#5bc8af" stroke-width="1"/>
-              <text x="989" y="93" text-anchor="middle" fill="#1a6a52" font-weight="600">Retain</text>
+              <text x="989" y="93" text-anchor="middle" fill="#1a6a52" font-weight="600">Act</text>
               <line x1="1006" y1="91" x2="1014" y2="91" stroke="#9090b8" stroke-width="1" marker-end="url(#exp-arr)"/>
               <rect x="1016" y="80" width="34" height="22" rx="3" fill="#f4f2ff" stroke="#7c6ff7" stroke-width="1"/>
-              <text x="1033" y="93" text-anchor="middle" fill="#5048a8" font-weight="600">Expand</text>
+              <text x="1033" y="93" text-anchor="middle" fill="#5048a8" font-weight="600">Teleop</text>
             </g>
             <path d="M857 122 Q875 115 901 118 Q928 128 945 112 Q962 100 989 106 Q1006 112 1033 102" fill="none" stroke="#7c6ff7" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
             <circle cx="945" cy="112" r="4" fill="#f08060" opacity=".8"/>
-            <text x="945" y="136" text-anchor="middle" font-size="5.5" fill="#8a3820" font-family="-apple-system,sans-serif">drop-off</text>
-            <text x="840" y="152" font-size="6" fill="#808098" font-family="-apple-system,sans-serif">Pain: unclear value prop at signup</text>
-            <text x="840" y="163" font-size="6" fill="#808098" font-family="-apple-system,sans-serif">Opp: personalise onboarding flow w/ LLM</text>
+            <text x="945" y="136" text-anchor="middle" font-size="5.5" fill="#8a3820" font-family="-apple-system,sans-serif">handover</text>
+            <text x="840" y="152" font-size="6" fill="#808098" font-family="-apple-system,sans-serif">Risk: 5G handover latency spike</text>
+            <text x="840" y="163" font-size="6" fill="#808098" font-family="-apple-system,sans-serif">Fix: predictive teleop switchover</text>
             <g>
               <rect x="840" y="185" width="8"  height="15" rx="1" fill="#7c6ff7" opacity=".7"/>
               <rect x="852" y="180" width="8"  height="20" rx="1" fill="#7c6ff7" opacity=".8"/>
@@ -199,24 +197,24 @@ title: Home
               <rect x="888" y="168" width="8"  height="32" rx="1" fill="#5bc8af" opacity=".9"/>
               <line x1="838" y1="200" x2="900" y2="200" stroke="#d0ccc8" stroke-width=".8"/>
             </g>
-            <text x="840" y="210" font-size="5.5" fill="#9090a8" font-family="monospace">activation rate (wk 1&#x2013;5)</text>
+            <text x="840" y="210" font-size="5.5" fill="#9090a8" font-family="monospace">teleop success rate (runs 1&#x2013;5)</text>
           </g>
           <!-- green sticky -->
           <g style="animation:exp-float2 6.5s ease-in-out infinite 1.5s">
             <rect x="836" y="225" width="78" height="70" rx="2" fill="#d4f5e0" stroke="#a0e0b8" stroke-width=".8"/>
-            <text x="842" y="239" font-size="7" fill="#1a5a30" font-family="-apple-system,sans-serif" font-weight="600">Shipped &#x2713;</text>
-            <text x="842" y="251" font-size="6" fill="#2a7040" font-family="-apple-system,sans-serif">RAG pipeline</text>
-            <text x="842" y="261" font-size="6" fill="#2a7040" font-family="-apple-system,sans-serif">+40% accuracy</text>
-            <text x="842" y="275" font-size="6" fill="#2a7040" font-family="-apple-system,sans-serif">$40K recovered</text>
-            <text x="842" y="285" font-size="6" fill="#2a7040" font-family="-apple-system,sans-serif">pipeline</text>
+            <text x="842" y="239" font-size="7" fill="#1a5a30" font-family="-apple-system,sans-serif" font-weight="600">Deployed &#x2713;</text>
+            <text x="842" y="251" font-size="6" fill="#2a7040" font-family="-apple-system,sans-serif">C-V2X testbed</text>
+            <text x="842" y="261" font-size="6" fill="#2a7040" font-family="-apple-system,sans-serif">12ms e2e latency</text>
+            <text x="842" y="275" font-size="6" fill="#2a7040" font-family="-apple-system,sans-serif">5G teleop pipeline</text>
+            <text x="842" y="285" font-size="6" fill="#2a7040" font-family="-apple-system,sans-serif">live on campus</text>
           </g>
           <!-- purple sticky -->
           <g style="animation:exp-float1 7s ease-in-out infinite 2s">
             <rect x="748" y="230" width="76" height="58" rx="2" fill="#ede8ff" stroke="#c0b0f8" stroke-width=".8"/>
-            <text x="754" y="244" font-size="7" fill="#3a2880" font-family="-apple-system,sans-serif" font-weight="600">Model notes</text>
-            <text x="754" y="256" font-size="6" fill="#5040a0" font-family="-apple-system,sans-serif">BERTopic &#x2713;</text>
-            <text x="754" y="266" font-size="6" fill="#5040a0" font-family="-apple-system,sans-serif">GPT-2 fine-tune</text>
-            <text x="754" y="276" font-size="6" fill="#5040a0" font-family="-apple-system,sans-serif">hybrid search</text>
+            <text x="754" y="244" font-size="7" fill="#3a2880" font-family="-apple-system,sans-serif" font-weight="600">DT notes</text>
+            <text x="754" y="256" font-size="6" fill="#5040a0" font-family="-apple-system,sans-serif">Sionna RT &#x2713;</text>
+            <text x="754" y="266" font-size="6" fill="#5040a0" font-family="-apple-system,sans-serif">ray-tracing model</text>
+            <text x="754" y="276" font-size="6" fill="#5040a0" font-family="-apple-system,sans-serif">3D scene recon</text>
           </g>
           <!-- pen -->
           <g style="animation:exp-penroll 4s ease-in-out infinite" transform-origin="280 370">
@@ -228,9 +226,9 @@ title: Home
           <path d="M 228 130 Q 310 130 374 160" fill="none" stroke="#7c6ff7" stroke-width="1.2" opacity=".15" stroke-dasharray="5 7" stroke-linecap="round"/>
           <path d="M 706 180 Q 760 180 830 140" fill="none" stroke="#5bc8af" stroke-width="1.2" opacity=".15" stroke-dasharray="5 7" stroke-linecap="round"/>
           <!-- zone labels -->
-          <text x="90"  y="30" font-size="8" fill="#b0a8d0" font-family="-apple-system,sans-serif" font-weight="600" letter-spacing="2" text-anchor="middle" opacity=".6">RAW DATA</text>
-          <text x="540" y="30" font-size="8" fill="#b0a8d0" font-family="-apple-system,sans-serif" font-weight="600" letter-spacing="2" text-anchor="middle" opacity=".6">AI / ML</text>
-          <text x="940" y="30" font-size="8" fill="#b0a8d0" font-family="-apple-system,sans-serif" font-weight="600" letter-spacing="2" text-anchor="middle" opacity=".6">PRODUCT</text>
+          <text x="90"  y="30" font-size="8" fill="#b0a8d0" font-family="-apple-system,sans-serif" font-weight="600" letter-spacing="2" text-anchor="middle" opacity=".6">SENSORS</text>
+          <text x="540" y="30" font-size="8" fill="#b0a8d0" font-family="-apple-system,sans-serif" font-weight="600" letter-spacing="2" text-anchor="middle" opacity=".6">ROS 2 / AV</text>
+          <text x="940" y="30" font-size="8" fill="#b0a8d0" font-family="-apple-system,sans-serif" font-weight="600" letter-spacing="2" text-anchor="middle" opacity=".6">DIGITAL TWIN</text>
         </svg>
         <div class="exp-vignette"></div>
         <h2><span>Experience</span></h2>
@@ -250,8 +248,8 @@ title: Home
       <div class="featured-post featured-post-proj">
         <div class="proj-grid-section">
           <div class="proj-grid-header">
-            <span class="proj-name">antra-dev</span>
-            <span class="proj-count">389 contributions in the last year</span>
+            <span class="proj-name">lalitaditya</span>
+            <span class="proj-count">412 contributions in the last year</span>
           </div>
           <div class="proj-month-row">
             <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
@@ -646,19 +644,19 @@ title: Home
               <div class="proj-dot" style="background:#ff5f57"></div>
               <div class="proj-dot" style="background:#febc2e"></div>
               <div class="proj-dot" style="background:#28c840"></div>
-              <span class="proj-term-title">bash &#x2014; training</span>
+              <span class="proj-term-title">bash &#x2014; simulation</span>
             </div>
             <div class="proj-term-body">
-              <div class="proj-l1"><span style="color:#3fb950">antra</span><span style="color:#8b949e">@stanford </span><span style="color:#fff">python train.py --model bertopic</span></div>
-              <div class="proj-l2"><span>Loading 265 fellow responses... </span><span style="color:#3fb950">done</span></div>
-              <div class="proj-l3"><span>Fitting sentence embeddings </span><span style="color:#3fb950">&#x2713;</span></div>
-              <div class="proj-l4"><span>UMAP &nbsp;&nbsp;&nbsp;</span><span class="proj-bar-wrap"><span class="proj-bar-fill proj-bf1"></span></span><span style="color:#3fb950">100%</span></div>
-              <div class="proj-l5"><span>HDBSCAN</span><span class="proj-bar-wrap"><span class="proj-bar-fill proj-bf2"></span></span><span style="color:#40c463"> 88%</span></div>
-              <div class="proj-l6"><span style="color:#3fb950">&#x2713; </span><span style="color:#e6edf3">12 topics &#xb7; coherence </span><span style="color:#e3b341">0.68</span></div>
-              <div class="proj-l7"><span style="color:#3fb950">&#x2713; </span><span style="color:#7ee787">"career clarity &amp; post-grad uncertainty"</span></div>
-              <div class="proj-l8"><span style="color:#3fb950">&#x2713; </span><span style="color:#79c0ff">outputs/cq_findings.pdf</span><span> saved</span></div>
-              <div class="proj-l9"><span>Hybrid search accuracy: </span><span style="color:#e3b341">+40%</span><span> over baseline</span></div>
-              <div class="proj-l10"><span style="color:#3fb950">antra</span><span style="color:#8b949e">@stanford </span><span class="proj-cur"></span></div>
+              <div class="proj-l1"><span style="color:#3fb950">lalit</span><span style="color:#8b949e">@umn </span><span style="color:#fff">ros2 launch av_sim teleop.launch.py</span></div>
+              <div class="proj-l2"><span>Spawning CARLA server... </span><span style="color:#3fb950">done</span></div>
+              <div class="proj-l3"><span>Loading HD map (SLAM) </span><span style="color:#3fb950">&#x2713;</span></div>
+              <div class="proj-l4"><span>LiDAR </span><span class="proj-bar-wrap"><span class="proj-bar-fill proj-bf1"></span></span><span style="color:#3fb950">100%</span></div>
+              <div class="proj-l5"><span>V2X&nbsp;&nbsp;&nbsp;</span><span class="proj-bar-wrap"><span class="proj-bar-fill proj-bf2"></span></span><span style="color:#40c463"> 98%</span></div>
+              <div class="proj-l6"><span style="color:#3fb950">&#x2713; </span><span style="color:#e6edf3">sensor fusion online &#xb7; </span><span style="color:#e3b341">3 vehicles</span></div>
+              <div class="proj-l7"><span style="color:#3fb950">&#x2713; </span><span style="color:#7ee787">teleop latency: 18ms (5G NR)</span></div>
+              <div class="proj-l8"><span style="color:#3fb950">&#x2713; </span><span style="color:#79c0ff">logs/run_042_metrics.csv</span><span> saved</span></div>
+              <div class="proj-l9"><span>C-V2X PRR: </span><span style="color:#e3b341">99.2%</span><span> at 200m range</span></div>
+              <div class="proj-l10"><span style="color:#3fb950">lalit</span><span style="color:#8b949e">@umn </span><span class="proj-cur"></span></div>
             </div>
           </div>
           <div class="proj-term">
@@ -669,17 +667,17 @@ title: Home
               <span class="proj-term-title">bash &#x2014; git</span>
             </div>
             <div class="proj-term-body">
-              <div class="proj-r1"><span style="color:#3fb950">antra</span><span style="color:#8b949e">@stanford </span><span style="color:#fff">git log --oneline -6</span></div>
-              <div class="proj-r2"><span style="color:#e3b341">a3f9c12 </span><span>feat: hybrid search + reranker RAG</span></div>
-              <div class="proj-r3"><span style="color:#e3b341">b91e445 </span><span>fix: BERTopic min_topic_size 265 docs</span></div>
-              <div class="proj-r4"><span style="color:#e3b341">c72d881 </span><span>feat: AssemblyAI webhook &#x2192; Claude API</span></div>
-              <div class="proj-r5"><span style="color:#e3b341">d44a230 </span><span>refactor: Airtable cross-base match</span></div>
-              <div class="proj-r6"><span style="color:#e3b341">e19b774 </span><span>feat: GPT-2 fine-tune sonnet corpus</span></div>
-              <div class="proj-r7"><span style="color:#e3b341">f8c3009 </span><span>init: Flask backend + Vercel deploy</span></div>
-              <div class="proj-r8"><span style="color:#3fb950">antra</span><span style="color:#8b949e">@stanford </span><span style="color:#fff">git push origin main</span></div>
+              <div class="proj-r1"><span style="color:#3fb950">lalit</span><span style="color:#8b949e">@umn </span><span style="color:#fff">git log --oneline -6</span></div>
+              <div class="proj-r2"><span style="color:#e3b341">a3f9c12 </span><span>feat: ray-tracing digital twin pipeline</span></div>
+              <div class="proj-r3"><span style="color:#e3b341">b91e445 </span><span>fix: C-V2X PC5 latency under load</span></div>
+              <div class="proj-r4"><span style="color:#e3b341">c72d881 </span><span>feat: LiDAR-camera-GNSS fusion node</span></div>
+              <div class="proj-r5"><span style="color:#e3b341">d44a230 </span><span>refactor: teleop safety switchover</span></div>
+              <div class="proj-r6"><span style="color:#e3b341">e19b774 </span><span>feat: Autoware planning integration</span></div>
+              <div class="proj-r7"><span style="color:#e3b341">f8c3009 </span><span>init: ROS 2 AV testbed + 5G UE</span></div>
+              <div class="proj-r8"><span style="color:#3fb950">lalit</span><span style="color:#8b949e">@umn </span><span style="color:#fff">git push origin main</span></div>
               <div class="proj-r9"><span>Writing objects: </span><span style="color:#3fb950">100%</span><span> (5/5) &#xb7; 2.4 KiB</span></div>
               <div class="proj-r10"><span style="color:#3fb950">&#x2713; </span><span>Branch </span><span style="color:#e3b341">main</span><span> &#x2192; origin/main</span></div>
-              <div class="proj-r11"><span style="color:#3fb950">antra</span><span style="color:#8b949e">@stanford </span><span class="proj-cur2"></span></div>
+              <div class="proj-r11"><span style="color:#3fb950">lalit</span><span style="color:#8b949e">@umn </span><span class="proj-cur2"></span></div>
             </div>
           </div>
         </div>

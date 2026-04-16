@@ -42,16 +42,16 @@ permalink: /education/
   .wave-timeline {
     position: relative;
     width: 100%;
-    min-width: 1000px;
-    height: 760px;
-    margin: -170px 0px 10px;
+    min-width: 1300px;
+    height: 720px;
+    margin: -100px 0px 0px;
   }
   .wave-svg {
     position: absolute;
     top: 280px;
     left: 0;
     width: 100%;
-    height: 340px;
+    height: 240px;
     pointer-events: none;
     z-index: 1;
   }
@@ -88,7 +88,6 @@ permalink: /education/
     flex-shrink: 0;
   }
 
-  /* ── Date pill ───────────────────────────────────── */
   .tl-date {
     display: inline-flex;
     align-items: center;
@@ -106,17 +105,13 @@ permalink: /education/
     transform: translateX(-50%);
     z-index: 4;
   }
-  /* Date sits on the OPPOSITE side of the dot from the card */
   .wave-above .tl-date {
-    /* Above-card → date below the dot */
     top: calc(100% + 8px);
   }
   .wave-below .tl-date {
-    /* Below-card → date above the dot */
     bottom: calc(100% + 8px);
   }
 
-  /* ── Card ────────────────────────────────────────── */
   .tl-card {
     background: white;
     border-radius: 16px;
@@ -133,17 +128,6 @@ permalink: /education/
     align-items: center;
     gap: 8px;
     margin-bottom: 3px;
-  }
-  .tl-card-img-icon {
-    position: absolute;
-    right: -40px;
-    bottom: -30px;
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    opacity: 0.22;
-    pointer-events: none;
-    user-select: none;
   }
   .tl-card h3 {
     font-size: 0.95rem;
@@ -174,14 +158,6 @@ permalink: /education/
     padding-left: 14px;
   }
   .tl-desc li { margin-bottom: 5px; }
-  .tl-subheading {
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #7c6ff7;
-    margin: 12px 0 6px;
-  }
   .tl-card-icon {
     position: absolute;
     right: -10px;
@@ -195,70 +171,72 @@ permalink: /education/
 </style>
 
 <p class="exp-label">03 / Foundation</p>
-<p class="exp-intro">EE undergrad who got obsessed with why products fail, won some hackathons, consulted across three continents, and ended up at Stanford. The throughline was always the same: find the messy human problem, build the technical solution, make it scale.</p>
+<p class="exp-intro">From electronics engineering in India to robotics and now a Ph.D. in computer science at Minnesota, each step deepened my understanding of how machines perceive, decide, and communicate. The throughline: building systems that bridge the physical and digital worlds.</p>
 
 <div class="wave-wrap">
   <div class="wave-timeline">
 
-    <!-- ── The wave line (SVG) ── -->
-    <!-- viewBox 0 0 1000 240. Two quadratic curves:
-         (0,120)→(500,120) via control (250,240) → trough at (250,180)
-         (500,120)→(1000,120) via control (750,0) → peak  at (750,60)  -->
-    <svg class="wave-svg" viewBox="0 0 1000 340" preserveAspectRatio="none">
+    <svg class="wave-svg" viewBox="0 0 1000 240" preserveAspectRatio="none">
       <defs>
         <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stop-color="#5bc8af"/>
           <stop offset="100%" stop-color="#7c6ff7"/>
         </linearGradient>
       </defs>
-      <path d="M 0 170 Q 250 500 500 170 T 1000 170"
+      <path d="M 0 120 Q 166 320 333 120 Q 500 -80 666 120 Q 833 320 1000 120"
             stroke="url(#waveGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
     </svg>
 
-    <!-- ── Stanford: above the wave, dot at left trough (25%, y=460) ── -->
-    <div class="wave-entry wave-above" style="left: 25%; top: 617px;">
+    <!-- ── PES University: above the wave, dot at left trough (16.6%) ── -->
+    <div class="wave-entry wave-above" style="left: 16.6%; top: 500px;">
       <div class="tl-card">
         <div class="tl-card-header">
-          <h3>Stanford University</h3>
-          <span class="tl-location">Stanford, CA</span>
+          <h3>PES University</h3>
+          <span class="tl-location">Bengaluru, India</span>
         </div>
-        <span class="tl-role">Master of Science in Management Science and Engineering</span>
+        <span class="tl-role">Bachelor of Technology in Electronics and Communication Engineering</span>
         <ul class="tl-desc">
-          <li>Teaching Assistant for Managing Innovation and Driving Adoption in Frontier Technologies.</li>
-          <li>Partnered with Windborne Systems on weather intelligence and AI applications spanning Latin America and Europe.</li>
-          <li>Built GTM automation and re-engagement workflows at Kintsugi, a startup navigating the chaos of US sales tax compliance.</li>
-          <li><em>Relevant coursework: Data Science · Optimization · Strategy · Product Management · Deep Learning · NLP</em></li>
+          <li><em>Relevant coursework: Embedded Systems, Signal Processing, Digital Communications, IoT, Python, C++</em></li>
         </ul>
-        <img src="/assets/img/stanford-logo.avif" class="tl-card-img-icon" alt="">
       </div>
-      <span class="tl-date">Sept 2024 — Present</span>
+      <span class="tl-date">Aug 2019 — May 2023</span>
       <div class="we-stem"></div>
       <div class="we-dot"></div>
     </div>
 
-    <!-- ── VIT: below the wave, dot at right peak (75%, y=340) ── -->
-    <div class="wave-entry wave-below" style="left: 75%; top: 283px;">
+    <!-- ── UMN MS: below the wave, dot at center peak (50%) ── -->
+    <div class="wave-entry wave-below" style="left: 50%; top: 300px;">
       <div class="we-dot"></div>
       <div class="we-stem"></div>
-      <span class="tl-date">Jul 2019 — Jun 2023</span>
+      <span class="tl-date">Sep 2023 — May 2025</span>
       <div class="tl-card">
         <div class="tl-card-header">
-          <h3>Vellore Institute of Technology</h3>
-          <span class="tl-location">Vellore, India</span>
+          <h3>University of Minnesota</h3>
+          <span class="tl-location">Twin Cities, MN</span>
         </div>
-        <span class="tl-role">Bachelor of Technology in Electrical & Electronics Engineering</span>
+        <span class="tl-role">Master of Science in Robotics</span>
         <ul class="tl-desc">
-          <li>Merit Scholar for Academic years 2019-20 and 2020-21.</li>
-          <li><em>Relevant coursework: Python · Java · OOP · Statistical Data Analysis · Neural Networks · IoT</em></li>
+          <li><em>Relevant coursework: Robot Motion Planning, Computer Vision, Machine Learning, Control Systems, ROS/ROS 2</em></li>
         </ul>
-        <p class="tl-subheading">Extracurriculars</p>
-        <ul class="tl-desc">
-          <li>Led E'Summit'21 — an 8-event, 4-day business festival — managing 50+ volunteers and architecting Innoventure with 300+ participants.</li>
-          <li>Designed Futerpreneurs 6.0, a national business competition; managed a team of 15+ coordinators.</li>
-          <li>Placed in three national competitions: HackWIE (3rd), 3-Day CEO (2nd), Escape Rooms CEO (3rd).</li>
-        </ul>
-        <img src="/assets/img/vit-logo.png" class="tl-card-img-icon" alt="">
       </div>
+    </div>
+
+    <!-- ── UMN PhD: above the wave, dot at right trough (83.3%) ── -->
+    <div class="wave-entry wave-above" style="left: 83.3%; top: 500px;">
+      <div class="tl-card">
+        <div class="tl-card-header">
+          <h3>University of Minnesota</h3>
+          <span class="tl-location">Twin Cities, MN</span>
+        </div>
+        <span class="tl-role">Doctor of Philosophy in Computer Science</span>
+        <ul class="tl-desc">
+          <li>Advisor: Dr. Zhi-Li Zhang</li>
+          <li>Developing an AI-powered digital twin for CAVs that leverages ray tracing to predict network behavior, ensuring safe, reliable, real-time remote and cooperative driving over 5G/NextG and C-V2X.</li>
+        </ul>
+      </div>
+      <span class="tl-date">Jan 2025 — Dec 2027</span>
+      <div class="we-stem"></div>
+      <div class="we-dot"></div>
     </div>
 
   </div>

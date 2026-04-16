@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "About Me — Product, Data & AI"
+title: "About Me — CAVs, Digital Twins & 5G/NextG"
 permalink: /about/
 ---
 <style>
@@ -29,10 +29,7 @@ permalink: /about/
   }
 </style>
 <p class="exp-label">01 / Origin</p>
-<p class="exp-intro">I'm Antra, a product and data person who somehow ended up at Stanford after a detour through enterprise AI consulting, global startups, and more hackathons than I care to admit.</p>
-<p class="exp-intro">My work lives at the intersection of data science and product. I've shipped RAG pipelines, defined requirements, run user research sessions, and written the SQL that powered the dashboards, sometimes all in the same week. I genuinely don't know if that's a skill or a personality flaw, but it's gotten me this far.</p>
-<p class="exp-intro">The journey here was anything but linear. I started in electrical engineering, got curious about why products fail real users, and spent my undergrad winning business competitions and organizing events with 300+ participants. Consulting came next, where I built enterprise GenAI products at PwC before Stanford pulled me back into the world of research, data infrastructure, and academic chaos.</p>
-<p class="exp-intro">At Stanford, I've worked across the Haas Center for Public Service and the HEAL Lab at the School of Medicine. Through corporate sponsor projects, I worked with Windborne Systems on weather intelligence spanning Latin America and Europe, and with Kintsugi navigating the chaos of US sales tax compliance, which is a very long way of saying I've never really picked a lane, and I've made peace with that.</p>
-<p class="exp-intro">Outside of work, I'm either deep in a book, three episodes into a Netflix spiral I told myself would be just one, or at martial arts convincing myself discipline is still a personality trait I possess. Lately I've picked up stitching, which is either a very calming hobby or a sign I needed something that couldn't be automated.</p>
-<p class="exp-intro">Still figuring out the next chapter. Always building something in the meantime.</p>
-<p class="exp-intro">If any of that resonated, feel free to find me on <a href="https://linkedin.com/in/antra-nakhasi" target="_blank">LinkedIn</a>, see what I've been breaking lately on <a href="https://github.com/antranakhasi" target="_blank">GitHub</a>, or just drop me a note at <a href="mailto:anakhasi@stanford.edu">anakhasi@stanford.edu</a>.</p>
+<p class="exp-intro">I am a Ph.D. researcher in Computer Science at the University of Minnesota (advised by Prof. Zhi-Li Zhang). I build AI-powered digital twins for connected and autonomous vehicles (CAVs), integrating 5G/NextG and C-V2X to improve safety, reliability, and scalability. My interests span networked autonomy, real-time systems, robotics, and high-fidelity simulation. Lately, I'm developing a ray-tracing digital twin for physically accurate, in-the-loop sensor-environment modeling.</p>
+<p class="exp-intro">I hold an M.S. in Robotics from the University of Minnesota and a B.Tech. in Electronics & Communication Engineering from PES University.</p>
+<p class="exp-intro">I'm passionate about advancing the field of intelligent transportation systems and welcome collaborations in Digital Twins for CAVs, 5G/NextG networking, and C-V2X technologies.</p>
+<p class="exp-intro">If any of that resonated, feel free to find me on <a href="https://www.linkedin.com/in/lalitaditya-divakarla" target="_blank">LinkedIn</a>, see what I've been building on <a href="https://github.com/lalitaditya" target="_blank">GitHub</a>, or drop me a note at <a href="mailto:lalit.divakarla@gmail.com">lalit.divakarla@gmail.com</a>.</p>

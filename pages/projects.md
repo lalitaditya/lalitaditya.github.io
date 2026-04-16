@@ -51,10 +51,6 @@ permalink: /projects/
   .proj-tile-foot-end {
     margin-top: auto;
   }
-  /* .proj-tile:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06);
-  } */
 
   .proj-tile h3 {
     font-size: 0.95rem;
@@ -85,28 +81,6 @@ permalink: /projects/
     font-size: 150px;
     opacity: 0.12;
     line-height: 1;
-    pointer-events: none;
-    user-select: none;
-  }
-  .proj-tile-img-icon {
-    position: absolute;
-    right: -20px;
-    bottom: -20px;
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    opacity: 0.22;
-    pointer-events: none;
-    user-select: none;
-  }
-   .proj-tile-img-icon-gre {
-    position: absolute;
-    right: -15px;
-    bottom: -30px;
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-    opacity: 0.22;
     pointer-events: none;
     user-select: none;
   }
@@ -146,67 +120,51 @@ permalink: /projects/
 </style>
 
 <p class="exp-label">04 / Build</p>
-<p class="exp-intro">Some started as course projects, some as consulting deliverables, and at least one as a 3am idea I couldn't shake. The through line is usually the same: a real problem, a scrappy build, and something that actually ran in production. Not everything shipped cleanly. Most of them taught me more when they didn't.</p>
+<p class="exp-intro">Research prototypes, testbeds, and systems that started on a whiteboard and ended up running on real hardware. Most of these lived at the boundary of simulation and the physical world, and the most useful ones taught me something when they broke.</p>
 
 <div class="projects-grid" markdown="0">
   <div class="proj-tile">
-    <h3>Animal &rarr; Origami Image Translation</h3>
-    <span class="proj-tile-tags">Deep Learning &middot; NST &middot; CycleGAN &middot; AWS</span>
+    <h3>NextGDT: Ray-Tracing Digital Twin</h3>
+    <span class="proj-tile-tags">NVIDIA Sionna &middot; Ray Tracing &middot; 5G/NextG &middot; Digital Twin</span>
     <div class="proj-tile-desc">
       <ul>
-        <li>CS230 team project turning animal photos into origami-style images</li>
-        <li>Built and trained the feed-forward NST models</li>
-        <li>Ran a YOLOv8 segmentation pipeline over 61K images</li>
-        <li>Managed the AWS training stack on EC2, SageMaker, and S3</li>
+        <li>Leading Sony-sponsored project building AI-driven 3D mapping and ray-tracing digital twins for 5G/NextG network optimization</li>
+        <li>Dynamic scene reconstruction with multi-sensor validation using NVIDIA Sionna</li>
+        <li>Physically accurate channel modeling for in-the-loop sensor-environment simulation</li>
       </ul>
     </div>
-    <div class="proj-tile-foot proj-tile-foot-end">
-      <i class="fa fa-github"></i>
-      <a href="https://github.com/antranakhasi/Origami-Model-using-CycleGAN" target="_blank" rel="noopener" class="proj-tile-cta">check out the repo &rarr;</a>
-    </div>
-    <img src="/assets/img/origami.png" class="proj-tile-img-icon" alt="">
   </div>
   <div class="proj-tile">
-    <h3>Kintsugi Tax: Re-engagement Pipeline</h3>
-    <span class="proj-tile-tags">HubSpot · CRM Automation · Customer Research · Product Strategy</span>
+    <h3>C-V2X Testbed for Rural Intersections</h3>
+    <span class="proj-tile-tags">C-V2X &middot; PC5 &middot; OBU/RSU &middot; Conflict Detection &middot; Safety</span>
     <div class="proj-tile-desc">
       <ul>
-        <li>23+ customer discovery interviews (500+ outreach) surfaced a $40K+ pipeline recovery opportunity</li>
-        <li>Defined MVP: HubSpot "Blocked Item" field + feature-triggered rep follow-up workflow</li>
-        <li>Built ReEngageBot, a Slack/HubSpot automation that closes the product-to-sales feedback loop</li>
-        <li>Scoped MVP at ~$1,400–$1,500 with no new tooling required</li>
+        <li>Engineered low-cost C-V2X prototype (OBU-RSU, PC5) for conflict detection and priority warnings</li>
+        <li>Profiled latency, PRR, and jitter under varied traffic loads for scalable crash-risk reduction</li>
+        <li>Designed for rural intersection deployment with minimal infrastructure</li>
       </ul>
     </div>
-    <div class="proj-tile-foot">
-      <i class="fa fa-github"></i>
-      <a href="https://github.com/antranakhasi/ReEngageBot" target="_blank" rel="noopener" class="proj-tile-cta">check out ReEngageBot &rarr;</a>
-    </div>
-    <img src="/assets/img/kintsugi.png" class="proj-tile-img-icon" alt="">
   </div>
   <div class="proj-tile">
-    <h3>WeatherMesh: Go-to-Market Strategy</h3>
-    <span class="proj-tile-tags">Market Research · GTM · Competitive Analysis · B2B · Energy Tech · Product Strategy</span>
+    <h3>5G Teleoperation Pipeline for AVs</h3>
+    <span class="proj-tile-tags">5G NR &middot; Teleoperation &middot; ROS 2 &middot; Autoware &middot; QoS</span>
     <div class="proj-tile-desc">
       <ul>
-        <li>GTM strategy for WeatherMesh: AI weather API with 1-hour resolution in a $10B market</li>
-        <li>Segmented ICP across grid operators, energy analysts, and sustainability officers at utilities and IPPs</li>
-        <li>Three-tier pricing ($10–25k → $50–100k+/mo) benchmarked against 5 competitors</li>
-        <li>Designed distinct inbound (SEO, webinars) and outbound (ABM, trade shows, pilots) motions</li>
+        <li>Built end-to-end teleoperation pipeline streaming multi-camera AV data to remote operators over 5G</li>
+        <li>Measured latency/QoS during mobility and handovers on commercial networks</li>
+        <li>Developed safety layer for seamless switchover between autonomy and human-in-loop control</li>
       </ul>
     </div>
-    <img src="/assets/img/windborne.png" class="proj-tile-img-icon" alt="">
   </div>
   <div class="proj-tile">
-    <h3>GRE Analytical Writing Evaluation Tool</h3>
-    <span class="proj-tile-tags">Flask · OpenAI API · NLP Prompt Engineering · Web App · EdTech</span>
+    <h3>AutoMap: Autonomous Factory Mapping</h3>
+    <span class="proj-tile-tags">ROS &middot; Gazebo &middot; SLAM &middot; TurtleBot &middot; Nokia</span>
     <div class="proj-tile-desc">
       <ul>
-        <li>Built Flask-based GRE Issue Task simulator with timed in-browser writing and auto-submit system</li>
-        <li>Designed OpenAI evaluation pipeline using structured prompt engineering for GRE rubric scoring</li>
-        <li>Implemented real-time browser essay capture with preprocessing and submission handling</li>
-        <li>Generated rubric-aligned scoring and feedback engine with low-latency inference and improvement suggestions</li>
+        <li>Led ROS/Gazebo-driven SLAM system using TurtleBot with LiDAR and camera for autonomous mapping</li>
+        <li>Navigation stack tuning and autonomous SLAM to remove manual mapping workflows</li>
+        <li>Produced DT-ready point clouds for site-scale planning, deployed in Nokia factories</li>
       </ul>
     </div>
-    <img src="/assets/img/gre.png" class="proj-tile-img-icon-gre" alt="">
   </div>
 </div>
