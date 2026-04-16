@@ -187,11 +187,44 @@ permalink: /experience/
   .tl-desc li { margin-bottom: 5px; }
   .tl-card-icon {
     position: absolute;
-    right: -6px;
-    bottom: -6px;
-    font-size: 60px;
-    opacity: 0.05;
+    right: -10px;
+    bottom: -10px;
+    font-size: 110px;
+    opacity: 0.22;
     line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+  .tl-card-img-icon {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    opacity: 0.22;
+    pointer-events: none;
+    user-select: none;
+  }
+  .tl-heal-card {
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    opacity: 0.22;
+    pointer-events: none;
+    user-select: none;
+  }
+   .tl-haas-card {
+    position: absolute;
+    right: 0px;
+    bottom: -75px;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    opacity: 0.22;
     pointer-events: none;
     user-select: none;
   }
@@ -233,7 +266,7 @@ permalink: /experience/
           <li>Drove user adoption via feedback sessions; shipped features improving output accuracy by ~40%.</li>
           <li>Authored PRDs and conducted competitive analysis across 20+ industries to validate GenAI use cases.</li>
         </ul>
-        <span class="tl-card-icon">💼</span>
+        <img src="/assets/img/pwc.png" class="tl-card-img-icon" alt="">
       </div>
       <span class="tl-date">Jan 2023 — Aug 2024</span>
       <div class="we-stem"></div>
@@ -255,7 +288,7 @@ permalink: /experience/
           <li>Built NLP pipelines analyzing 500+ unstructured clinical records; reduced manual review effort at scale.</li>
           <li>Synthesized behavioral insights for interdisciplinary teams, informing improvements in care delivery workflows.</li>
         </ul>
-        <span class="tl-card-icon">🧬</span>
+        <img src="/assets/img/heal.png" class="tl-heal-card" alt="">
       </div>
     </div>
 
@@ -272,7 +305,7 @@ permalink: /experience/
           <li>Applied crawl-walk-run model to drive adoption; secured stakeholder buy-in for program-wide migration.</li>
           <li>Developed Airtable matching system with Airflow orchestration; reduced manual effort across 1,500+ records.</li>
         </ul>
-        <span class="tl-card-icon">📊</span>
+        <img src="/assets/img/haas.png" class="tl-haas-card" alt="">
       </div>
       <span class="tl-date">Dec 2025 — Present</span>
       <div class="we-stem"></div>

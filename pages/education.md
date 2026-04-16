@@ -130,9 +130,20 @@ permalink: /education/
   .tl-card-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     gap: 8px;
     margin-bottom: 3px;
+  }
+  .tl-card-img-icon {
+    position: absolute;
+    right: -40px;
+    bottom: -30px;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    opacity: 0.22;
+    pointer-events: none;
+    user-select: none;
   }
   .tl-card h3 {
     font-size: 0.95rem;
@@ -173,10 +184,10 @@ permalink: /education/
   }
   .tl-card-icon {
     position: absolute;
-    right: -6px;
-    bottom: -6px;
-    font-size: 60px;
-    opacity: 0.05;
+    right: -10px;
+    bottom: -10px;
+    font-size: 110px;
+    opacity: 0.12;
     line-height: 1;
     pointer-events: none;
     user-select: none;
@@ -218,7 +229,7 @@ permalink: /education/
           <li>Built GTM automation and re-engagement workflows at Kintsugi, a startup navigating the chaos of US sales tax compliance.</li>
           <li><em>Relevant coursework: Data Science · Optimization · Strategy · Product Management · Deep Learning · NLP</em></li>
         </ul>
-        <span class="tl-card-icon">🎓</span>
+        <img src="/assets/img/stanford-logo.avif" class="tl-card-img-icon" alt="">
       </div>
       <span class="tl-date">Sept 2024 — Present</span>
       <div class="we-stem"></div>
@@ -246,7 +257,7 @@ permalink: /education/
           <li>Designed Futerpreneurs 6.0, a national business competition; managed a team of 15+ coordinators.</li>
           <li>Placed in three national competitions: HackWIE (3rd), 3-Day CEO (2nd), Escape Rooms CEO (3rd).</li>
         </ul>
-        <span class="tl-card-icon">⚡</span>
+        <img src="/assets/img/vit-logo.png" class="tl-card-img-icon" alt="">
       </div>
     </div>
 
