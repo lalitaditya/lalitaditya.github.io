@@ -4,7 +4,7 @@ title: "About Me — Product, Data & AI"
 permalink: /about/
 ---
 <style>
-  .page-content { max-width: 775px; }
+  .page-content { max-width: 775px !important; }
   .page-content h1 { display: none; }
 
   .exp-label {
@@ -35,3 +35,4 @@ permalink: /about/
 <p class="exp-intro">At Stanford, I've worked across the Haas Center for Public Service and the HEAL Lab at the School of Medicine. Through corporate sponsor projects, I worked with Windborne Systems on weather intelligence spanning Latin America and Europe, and with Kintsugi navigating the chaos of US sales tax compliance, which is a very long way of saying I've never really picked a lane, and I've made peace with that.</p>
 <p class="exp-intro">Outside of work, I'm either deep in a book, three episodes into a Netflix spiral I told myself would be just one, or at martial arts convincing myself discipline is still a personality trait I possess. Lately I've picked up stitching, which is either a very calming hobby or a sign I needed something that couldn't be automated.</p>
 <p class="exp-intro">Still figuring out the next chapter. Always building something in the meantime.</p>
+<p class="exp-intro">If any of that resonated, feel free to find me on <a href="https://linkedin.com/in/antra-nakhasi" target="_blank">LinkedIn</a>, see what I've been breaking lately on <a href="https://github.com/antranakhasi" target="_blank">GitHub</a>, or just drop me a note at <a href="mailto:anakhasi@stanford.edu">anakhasi@stanford.edu</a>.</p>

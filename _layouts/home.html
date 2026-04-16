@@ -23,7 +23,7 @@ title: Home
         <div class="exp-topbar"></div>
         <div class="exp-dotgrid"></div>
         <div class="exp-desklight"></div>
-        <svg class="exp-svg" viewBox="0 0 1080 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <svg class="exp-svg" viewBox="0 0 1080 400" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <marker id="exp-arr" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="5" markerHeight="5" orient="auto">
               <path d="M1 1L7 4L1 7" fill="none" stroke="#9090b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -715,30 +715,67 @@ title: Home
     return 3*p1y*mid*Math.pow(1-mid,2) + 3*p2y*Math.pow(mid,2)*(1-mid) + Math.pow(mid,3);
   }
 
-  anim.addEventListener('enterFrame', function(e) {
+  function onEnterFrame(e) {
     var f = e.currentTime;
     if (f >= 59) {
       introText.style.clipPath = 'none';
       return;
     }
-    var linearProgress = Math.min(f / 60, 1);
+    var delay = 20;
+    var linearProgress = Math.min(Math.max(f - delay, 0) / (60 - delay), 1);
     var easedProgress = linearProgress <= 0 ? 0 : linearProgress >= 1 ? 1 : bezierY(0.75, 0, 0.25, 1, linearProgress);
     var tileWidth = tile.offsetWidth;
     var canvasX = 740 - 440 * easedProgress;
-    // avatar's visual left edge (the side facing the text) after scaleX(-1) flip
-    var avatarLeftEdge = tileWidth - (canvasX + 200) * (tileWidth / 1080);
-    // clip is relative to the element, not the tile
+    var avatarCenter = tileWidth - canvasX * (tileWidth / 1080);
     var textLeft = introText.offsetLeft;
     var elemWidth = introText.offsetWidth;
-    var visibleWidth = Math.max(0, avatarLeftEdge - textLeft);
+    var visibleWidth = Math.max(0, avatarCenter - textLeft);
     var clipRight = Math.max(0, elemWidth - visibleWidth);
     var clipPercent = (clipRight / elemWidth) * 100;
     introText.style.clipPath = 'inset(0 ' + clipPercent.toFixed(1) + '% 0 0)';
-  });
+  }
+  anim.addEventListener('enterFrame', onEnterFrame);
 
   anim.addEventListener('complete', function() {
     introText.style.clipPath = 'none';
-    anim.setLoop(true);
+    anim.removeEventListener('enterFrame', onEnterFrame);
+    anim.loop = true;
     anim.playSegments([60, 120], true);
   });
+</script>
+
+<script>
+  // Loop terminal typing animations — scroll up then re-type
+  (function() {
+    var CYCLE = 8000;
+    var terminals = document.querySelectorAll('.proj-term-body');
+    if (!terminals.length) return;
+
+    setInterval(function() {
+      // Scroll content up out of view
+      terminals.forEach(function(t) {
+        t.style.transition = 'transform 0.8s ease-in';
+        t.style.transform = 'translateY(-100%)';
+      });
+      // Once off-screen, reset everything instantly
+      setTimeout(function() {
+        terminals.forEach(function(t) {
+          t.style.transition = 'none';
+          t.style.transform = '';
+          var lines = t.children;
+          for (var i = 0; i < lines.length; i++) {
+            lines[i].style.animation = 'none';
+            lines[i].offsetHeight;
+            lines[i].style.animation = '';
+          }
+          var bars = t.querySelectorAll('.proj-bar-fill');
+          for (var j = 0; j < bars.length; j++) {
+            bars[j].style.animation = 'none';
+            bars[j].offsetHeight;
+            bars[j].style.animation = '';
+          }
+        });
+      }, 900);
+    }, CYCLE);
+  })();
 </script>

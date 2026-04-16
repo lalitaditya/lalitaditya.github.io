@@ -5,7 +5,7 @@ permalink: /experience/
 ---
 
 <style>
-  .page-content { max-width: 775px; }
+  .page-content { max-width: 775px !important; }
   .page-content h1 { display: none; }
 
   .exp-label {
