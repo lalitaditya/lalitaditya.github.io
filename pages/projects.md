@@ -99,6 +99,17 @@ permalink: /projects/
     pointer-events: none;
     user-select: none;
   }
+   .proj-tile-img-icon-gre {
+    position: absolute;
+    right: -15px;
+    bottom: -30px;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    opacity: 0.22;
+    pointer-events: none;
+    user-select: none;
+  }
   .proj-tile-foot {
     display: inline-flex;
     align-items: center;
@@ -186,9 +197,17 @@ permalink: /projects/
     <img src="/assets/img/windborne.png" class="proj-tile-img-icon" alt="">
   </div>
   <div class="proj-tile">
-    <h3>Project Four</h3>
-    <span class="proj-tile-tags">React · Flask · Vercel</span>
-    <span class="proj-tile-desc">Placeholder description for the fourth project. Details coming soon.</span>
-    <span class="proj-tile-icon">🚀</span>
+    <h3>GRE Analytical Writing Evaluation Tool</h3>
+    <span class="proj-tile-tags">Flask · OpenAI API · NLP Prompt Engineering · Web App · EdTech</span>
+    <div class="proj-tile-desc">
+      <ul>
+        <li>Built Flask-based GRE Issue Task simulator with timed in-browser writing and auto-submit system</li>
+        <li>Designed OpenAI evaluation pipeline using structured prompt engineering for GRE rubric scoring</li>
+        <li>Implemented real-time browser essay capture with preprocessing and submission handling</li>
+        <li>Generated rubric-aligned scoring and feedback engine with low-latency inference and improvement suggestions</li>
+      </ul>
+    </div>
+    <img src="/assets/img/gre.png" class="proj-tile-img-icon-gre" alt="">
+  </div>
   </div>
 </div>

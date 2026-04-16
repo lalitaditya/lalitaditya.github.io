@@ -211,12 +211,12 @@ permalink: /education/
           <stop offset="100%" stop-color="#7c6ff7"/>
         </linearGradient>
       </defs>
-      <path d="M 0 170 Q 250 420 500 170 Q 750 -80 1000 170"
+      <path d="M 0 170 Q 250 500 500 170 T 1000 170"
             stroke="url(#waveGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
     </svg>
 
     <!-- ── Stanford: above the wave, dot at left trough (25%, y=460) ── -->
-    <div class="wave-entry wave-above" style="left: 25%; top: 575px;">
+    <div class="wave-entry wave-above" style="left: 25%; top: 617px;">
       <div class="tl-card">
         <div class="tl-card-header">
           <h3>Stanford University</h3>
@@ -237,7 +237,7 @@ permalink: /education/
     </div>
 
     <!-- ── VIT: below the wave, dot at right peak (75%, y=340) ── -->
-    <div class="wave-entry wave-below" style="left: 75%; top: 325px;">
+    <div class="wave-entry wave-below" style="left: 75%; top: 283px;">
       <div class="we-dot"></div>
       <div class="we-stem"></div>
       <span class="tl-date">Jul 2019 — Jun 2023</span>
