@@ -59,72 +59,146 @@
 .featured-post h1 {
   margin: 10px;
 }
-.tile-intro-text {
-  position: absolute;
-  left: 20px;
-  top: 45%;
-  transform: translateY(-50%);
-  z-index: 1;
-  max-width: 520px;
-  clip-path: inset(0 100% 0 0);
-}
-@keyframes text-rise {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.tile-intro-text h1 {
-  font-family: $base-font-family;
-  font-size: 26px;
-  font-weight: 700;
-  color: #2c2c2c;
-  margin: 0 0 12px 0;
-  line-height: 1.2;
-  opacity: 0;
-  animation: text-rise 0.5s ease forwards;
-  animation-delay: 0.6s;
-}
-.tile-intro-text p {
-  font-family: $base-font-family;
-  font-size: 12px;
-  color: #6b6b6b;
-  margin: 2px 0;
-  line-height: 1.3;
-  opacity: 0;
-  animation: text-rise 0.65s ease forwards;
-}
-.tile-intro-text p:first-of-type { animation-delay: 0.9s; }
-.tile-intro-text p:last-of-type  { animation-delay: 0.9s; }
-.name-accent {
-  font-weight: 900;
-  font-size: 1.15em;
-  letter-spacing: -0.5px;
-}
 .featured-post-edu {
   overflow: hidden;
+  background: linear-gradient(135deg, #1a1832 0%, #0f0d1e 50%, #1a2332 100%);
 }
 .featured-post-edu h2 span {
   color: white;
 }
-.tile-bg {
+.edu-bg-pattern {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(124,111,247,.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+.edu-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 60% at 50% 50%, rgba(124,111,247,.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.edu-svg {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: tile-breathe 6s ease-in-out infinite;
+  pointer-events: none;
 }
-@keyframes tile-breathe {
-  0%, 100% { transform: scale(1.0); }
-  50%       { transform: scale(1.02); }
+@keyframes edu-cap-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+.edu-cap { animation: edu-cap-float 5s ease-in-out infinite; }
+/* ── About Me tile ─────────────────────── */
+.featured-post-about {
+  background: #0f0d1e;
+  overflow: hidden;
 }
-.featured-post-lottie {
-  background-color: #f7f6f3;
-  overflow: visible;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.1);
+.featured-post-about h2 span { color: #fff; }
+.about-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(124,111,247,.12) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
 }
+.about-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 60% at 70% 45%, rgba(91,200,175,.12) 0%, transparent 70%),
+              radial-gradient(ellipse 40% 50% at 30% 55%, rgba(124,111,247,.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+.about-orbits {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  width: 65%;
+  height: 80%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+@keyframes orbit-spin-1 { to { transform: rotate(345deg); } }
+@keyframes orbit-spin-2 { to { transform: rotate(385deg); } }
+@keyframes orbit-spin-3 { to { transform: rotate(320deg); } }
+.orbit { stroke-dasharray: 8 6; }
+.orbit-1 { animation: orbit-spin-1 25s linear infinite; transform-origin: 200px 200px; }
+.orbit-2 { animation: orbit-spin-2 18s linear infinite; transform-origin: 200px 200px; }
+.orbit-3 { animation: orbit-spin-3 12s linear infinite; transform-origin: 200px 200px; }
+@keyframes orbit-move-1 {
+  0%   { cx: 340; cy: 175; }
+  25%  { cx: 200; cy: 140; }
+  50%  { cx: 60;  cy: 200; }
+  75%  { cx: 200; cy: 260; }
+  100% { cx: 340; cy: 175; }
+}
+@keyframes orbit-move-2 {
+  0%   { cx: 90;  cy: 180; }
+  25%  { cx: 200; cy: 155; }
+  50%  { cx: 310; cy: 210; }
+  75%  { cx: 200; cy: 245; }
+  100% { cx: 90;  cy: 180; }
+}
+@keyframes orbit-move-3 {
+  0%   { cx: 280; cy: 190; }
+  25%  { cx: 200; cy: 170; }
+  50%  { cx: 120; cy: 200; }
+  75%  { cx: 200; cy: 230; }
+  100% { cx: 280; cy: 190; }
+}
+.orbit-dot-1 { animation: orbit-move-1 25s ease-in-out infinite; }
+.orbit-dot-2 { animation: orbit-move-2 18s ease-in-out infinite; }
+.orbit-dot-3 { animation: orbit-move-3 12s ease-in-out infinite; }
+@keyframes center-pulse-anim { 0%,100%{r:8;opacity:.2} 50%{r:14;opacity:.08} }
+.center-pulse { animation: center-pulse-anim 3s ease-in-out infinite; }
+@keyframes float-drift { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+.float-label { animation: float-drift 4s ease-in-out infinite; }
+.fl-1 { animation-delay: 0s; }
+.fl-2 { animation-delay: .8s; }
+.fl-3 { animation-delay: 1.6s; }
+.fl-4 { animation-delay: 2.4s; }
+.fl-5 { animation-delay: .4s; }
+.about-intro-text {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: 55%;
+}
+@keyframes about-text-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.about-intro-text h1 {
+  font-family: $base-font-family;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+  opacity: 0;
+  animation: about-text-rise 0.6s ease forwards 0.3s;
+}
+.about-intro-text .name-accent {
+  background: linear-gradient(90deg, #5bc8af, #7c6ff7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  font-size: 1.15em;
+  letter-spacing: -0.5px;
+}
+.about-intro-text p {
+  font-family: $base-font-family;
+  font-size: 12px;
+  color: rgba(255,255,255,.55);
+  margin: 3px 0;
+  line-height: 1.4;
+  opacity: 0;
+  animation: about-text-rise 0.6s ease forwards;
+}
+.about-intro-text p:first-of-type { animation-delay: 0.6s; }
+.about-intro-text p:last-of-type  { animation-delay: 0.8s; }
 .featured-post-exp {
   background: #f7f7f5;
   overflow: hidden;
@@ -245,16 +319,4 @@
 @keyframes exp-screenpulse { 0%,100%{opacity:.88} 50%{opacity:1} }
 @keyframes exp-penroll { 0%,100%{transform:rotate(-30deg)} 50%{transform:rotate(-28deg) translateY(-2px)} }
 @keyframes exp-steamrise { 0%{transform:translateY(0) scaleX(1);opacity:.6} 100%{transform:translateY(-18px) scaleX(.5);opacity:0} }
-#lottie-avatar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: scaleX(-1) scale(1.2);
-  z-index: 2;
-  /* fade avatar's visual left edge into tile background */
-  -webkit-mask-image: linear-gradient(to left, #f7f6f3 0%, black 28%, black 100%);
-  mask-image: linear-gradient(to left, #f7f6f3 0%, black 28%, black 100%);
-}
 

@@ -6,9 +6,35 @@ title: Home
 <div class="portfolio-grid">
   <article>
     <a href="{{ site.baseurl }}/about">
-      <div class="featured-post featured-post-lottie">
-        <div id="lottie-avatar"></div>
-        <div class="tile-intro-text">
+      <div class="featured-post featured-post-about">
+        <div class="about-bg-grid"></div>
+        <div class="about-glow"></div>
+        <!-- animated orbit rings -->
+        <svg class="about-orbits" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="orbit-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#5bc8af" stop-opacity=".4"/>
+              <stop offset="100%" stop-color="#7c6ff7" stop-opacity=".4"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="200" cy="200" rx="140" ry="60" fill="none" stroke="url(#orbit-grad)" stroke-width="1.2" transform="rotate(-15,200,200)" class="orbit orbit-1"/>
+          <ellipse cx="200" cy="200" rx="110" ry="45" fill="none" stroke="url(#orbit-grad)" stroke-width="1" transform="rotate(25,200,200)" class="orbit orbit-2"/>
+          <ellipse cx="200" cy="200" rx="80" ry="30" fill="none" stroke="url(#orbit-grad)" stroke-width=".8" transform="rotate(-40,200,200)" class="orbit orbit-3"/>
+          <!-- orbiting dots -->
+          <circle r="4" fill="#5bc8af" opacity=".8" class="orbit-dot orbit-dot-1"/>
+          <circle r="3" fill="#7c6ff7" opacity=".8" class="orbit-dot orbit-dot-2"/>
+          <circle r="2.5" fill="#f0c060" opacity=".7" class="orbit-dot orbit-dot-3"/>
+          <!-- center node -->
+          <circle cx="200" cy="200" r="8" fill="#7c6ff7" opacity=".3" class="center-pulse"/>
+          <circle cx="200" cy="200" r="4" fill="#7c6ff7" opacity=".7"/>
+          <!-- floating labels -->
+          <text x="340" y="175" font-size="8" fill="#7c6ff7" opacity=".5" font-family="monospace" class="float-label fl-1">5G</text>
+          <text x="60" y="220" font-size="8" fill="#5bc8af" opacity=".5" font-family="monospace" class="float-label fl-2">C-V2X</text>
+          <text x="200" y="130" font-size="8" fill="#f0c060" opacity=".5" font-family="monospace" text-anchor="middle" class="float-label fl-3">ROS 2</text>
+          <text x="290" y="260" font-size="7" fill="#7c6ff7" opacity=".4" font-family="monospace" class="float-label fl-4">LiDAR</text>
+          <text x="100" y="155" font-size="7" fill="#5bc8af" opacity=".4" font-family="monospace" class="float-label fl-5">Sionna</text>
+        </svg>
+        <div class="about-intro-text">
           <h1>Hi, I'm <span class="name-accent">Lalit</span></h1>
           <p>Ph.D. in CS at UMN, building AI-powered digital twins for autonomous vehicles.</p>
           <p>I speak fluent Python, C++, ROS 2, and occasionally 5G.</p>
@@ -238,7 +264,24 @@ title: Home
   <article>
     <a href="{{ site.baseurl }}/education">
       <div class="featured-post featured-post-edu">
-        <div class="tile-bg" style="background-image:url({{ site.baseurl }}/assets/img/education.png)"></div>
+        <div class="edu-bg-pattern"></div>
+        <div class="edu-glow"></div>
+        <svg class="edu-svg" viewBox="0 0 500 320" preserveAspectRatio="xMidYMid meet">
+          <!-- graduation cap -->
+          <g class="edu-cap" opacity=".15">
+            <polygon points="250,80 350,130 250,180 150,130" fill="#7c6ff7"/>
+            <polygon points="250,180 350,130 350,155 250,205" fill="#5048a8"/>
+            <polygon points="250,180 150,130 150,155 250,205" fill="#6058c0"/>
+            <line x1="350" y1="130" x2="350" y2="200" stroke="#7c6ff7" stroke-width="2"/>
+            <circle cx="350" cy="200" r="4" fill="#5bc8af"/>
+            <line x1="350" y1="200" x2="365" y2="220" stroke="#5bc8af" stroke-width="1.5"/>
+            <rect x="360" y="220" width="10" height="14" rx="2" fill="#5bc8af" opacity=".6"/>
+          </g>
+          <!-- floating text labels -->
+          <text x="80" y="110" font-size="11" fill="#5bc8af" opacity=".25" font-family="monospace" class="float-label fl-1">PES University</text>
+          <text x="300" y="70" font-size="11" fill="#7c6ff7" opacity=".25" font-family="monospace" class="float-label fl-2">UMN Robotics</text>
+          <text x="160" y="270" font-size="12" fill="#7c6ff7" opacity=".3" font-family="monospace" font-weight="700" class="float-label fl-3">Ph.D. in CS</text>
+        </svg>
         <h2><span>Education</span></h2>
       </div>
     </a>
@@ -687,60 +730,6 @@ title: Home
   </article>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
-<script>
-  var anim = lottie.loadAnimation({
-    container: document.getElementById('lottie-avatar'),
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
-    path: '{{ site.baseurl }}/assets/avatar.json',
-    assetsPath: '{{ site.baseurl }}/assets/img/'
-  });
-
-  var introText = document.querySelector('.tile-intro-text');
-  var tile = document.querySelector('.featured-post-lottie');
-
-  // Solve cubic bezier matching Lottie easing: o=(0.75,0), i=(0.25,1)
-  // CSS equivalent: cubic-bezier(0.75, 0, 0.25, 1)
-  function bezierY(p1x, p1y, p2x, p2y, t) {
-    var lo = 0, hi = 1, mid;
-    for (var i = 0; i < 20; i++) {
-      mid = (lo + hi) / 2;
-      var x = 3*p1x*mid*Math.pow(1-mid,2) + 3*p2x*Math.pow(mid,2)*(1-mid) + Math.pow(mid,3);
-      if (x < t) lo = mid; else hi = mid;
-    }
-    return 3*p1y*mid*Math.pow(1-mid,2) + 3*p2y*Math.pow(mid,2)*(1-mid) + Math.pow(mid,3);
-  }
-
-  function onEnterFrame(e) {
-    var f = e.currentTime;
-    if (f >= 59) {
-      introText.style.clipPath = 'none';
-      return;
-    }
-    var delay = 20;
-    var linearProgress = Math.min(Math.max(f - delay, 0) / (60 - delay), 1);
-    var easedProgress = linearProgress <= 0 ? 0 : linearProgress >= 1 ? 1 : bezierY(0.75, 0, 0.25, 1, linearProgress);
-    var tileWidth = tile.offsetWidth;
-    var canvasX = 740 - 440 * easedProgress;
-    var avatarCenter = tileWidth - canvasX * (tileWidth / 1080);
-    var textLeft = introText.offsetLeft;
-    var elemWidth = introText.offsetWidth;
-    var visibleWidth = Math.max(0, avatarCenter - textLeft);
-    var clipRight = Math.max(0, elemWidth - visibleWidth);
-    var clipPercent = (clipRight / elemWidth) * 100;
-    introText.style.clipPath = 'inset(0 ' + clipPercent.toFixed(1) + '% 0 0)';
-  }
-  anim.addEventListener('enterFrame', onEnterFrame);
-
-  anim.addEventListener('complete', function() {
-    introText.style.clipPath = 'none';
-    anim.removeEventListener('enterFrame', onEnterFrame);
-    anim.loop = true;
-    anim.playSegments([60, 120], true);
-  });
-</script>
 
 <script>
   // Loop terminal typing animations — scroll up then re-type
