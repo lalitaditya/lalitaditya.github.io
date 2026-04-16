@@ -51,10 +51,10 @@ permalink: /projects/
   .proj-tile-foot-end {
     margin-top: auto;
   }
-  .proj-tile:hover {
+  /* .proj-tile:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 32px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06);
-  }
+  } */
 
   .proj-tile h3 {
     font-size: 0.95rem;
@@ -208,6 +208,5 @@ permalink: /projects/
       </ul>
     </div>
     <img src="/assets/img/gre.png" class="proj-tile-img-icon-gre" alt="">
-  </div>
   </div>
 </div>
